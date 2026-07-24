@@ -1,4 +1,4 @@
-# CyberSwipe-AI 🤖🔒
+# CyberSwipe-AI
 
 Subproyecto de Inteligencia Artificial para **CyberSwipe**, un videojuego serio de ciberseguridad desarrollado en Godot 4 como parte de una Tesis de Ingeniería Civil en Informática.
 
@@ -6,7 +6,7 @@ El objetivo de **CyberSwipe-AI** es generar cápsulas educativas dinámicas basa
 
 ---
 
-## 🔄 Flujo de Trabajo del Sistema
+## Flujo de Trabajo del Sistema
 
 ```text
 [ Ollama (LLM Local) ]
@@ -32,7 +32,7 @@ El objetivo de **CyberSwipe-AI** es generar cápsulas educativas dinámicas basa
 
 ---
 
-## 🛠️ Tecnologías y Requisitos Previos
+## Tecnologías y Requisitos Previos
 
 * **Lenguaje:** Python 3.10+
 * **Motor LLM Local:** [Ollama](https://ollama.com/) con el modelo `gemma4:e2b` (o compatible).
@@ -49,7 +49,7 @@ El objetivo de **CyberSwipe-AI** es generar cápsulas educativas dinámicas basa
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 CyberSwipe-IA/
@@ -93,7 +93,7 @@ CyberSwipe-IA/
 
 ---
 
-## ⚙️ Configuración e Instalación
+## Configuración e Instalación
 
 ### 1. Clonar el repositorio e instalar dependencias
 ```bash
@@ -130,12 +130,12 @@ OUTPUT_DIR=output
 LOG_LEVEL=INFO
 ```
 
-> 💡 **Nota sobre Hardware / Laptops:**  
-> Si ejecutas en un equipo con GPU dedicada limitada (ej. 2 GB VRAM), mantén `OLLAMA_NUM_GPU=0` para forzar el procesamiento en CPU pura y evitar crashes por desbordamiento de memoria de vídeo (`0xc0000409`).
+> **Nota sobre Hardware / Laptops:**  
+> Si ejecutas en un equipo con GPU dedicada limitada (ej. 2 GB VRAM), mantén `OLLAMA_NUM_GPU=0` para forzar el procesamiento en CPU pura y evitar fallos por desbordamiento de memoria de vídeo (`0xc0000409`).
 
 ---
 
-## 🚀 Guía de Uso
+## Guía de Uso
 
 ### 1. Iniciar el servidor local de Ollama
 Asegúrate de tener corriendo Ollama en segundo plano con el modelo descargado:
@@ -182,7 +182,7 @@ Una vez que las cápsulas `.json` hayan sido revisadas y aprobadas por el expert
 
 ---
 
-## 🎯 Principios de Diseño Instruccional
+## Principios de Diseño Instruccional
 
 1. **No-Binariedad:** Ambas opciones de decisión (izquierda y derecha) deben ser frases completas, plausibles y defendibles en el contexto laboral diario. Se prohíben respuestas caricaturescas u obvias (ej: *"Dar clave"* vs *"No dar clave"*).
 2. **Aislamiento Temático:** Cada cápsula trata **únicamente** sobre sus objetivos temáticos sin contaminación (ej: la Cápsula 1 aborda solo credenciales/MFA sin adelantarse a Phishing).
@@ -192,6 +192,6 @@ Una vez que las cápsulas `.json` hayan sido revisadas y aprobadas por el expert
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto fue desarrollado como parte de una tesis de grado para la carrera de Ingeniería Civil en Informática.
