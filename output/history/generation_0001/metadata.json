@@ -1,0 +1,12 @@
+{
+    "generation_id": "gen_167ef1cc",
+    "timestamp": "2026-07-07T03:47:56.526314Z",
+    "model_used": "gemma4:e2b",
+    "status": "failed",
+    "errors": [
+        "Error de sintaxis JSON: Unterminated string starting at: line 68 column 26 (char 3090)"
+    ],
+    "capsules_requested": 1,
+    "capsules_generated": 0,
+    "duration_seconds": 174.53
+}

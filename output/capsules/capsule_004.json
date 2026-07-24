@@ -1,0 +1,110 @@
+{
+    "id": 4,
+    "titulo": "Protección y Clasificación de Datos Corporativos",
+    "subtitulo": "Aprende a identificar la sensibilidad de la información para protegerla según las políticas de la empresa.",
+    "mini_descripcion": "Clasifica correctamente los datos (público, interno, confidencial) antes de compartirlos o almacenarlos en diferentes entornos.",
+    "contenido_estudio": "[b]1. Clasificación de Datos Corporativos[/b]\nLa información debe clasificarse según su impacto si se divulga: [b]Pública[/b], [b]Interna[/b] (uso interno, no para terceros), y [b]Confidencial[/b] (datos financieros, estrategias de clientes, propiedad intelectual). La información [b]Confidencial[/b] requiere las protecciones más estrictas.\n\n[b]2. El Riesgo de la Divulgación[/b]\nLa divulgación accidental de datos confidenciales puede llevar a sanciones legales graves para la PYME en Chile (Ley 21.719) y daño irreparable a la reputación comercial, además de multas administrativas.\n\n[b]3. Almacenamiento Seguro por Entorno[/b]\nLos datos [b]Confidenciales[/b] deben almacenarse únicamente en sistemas autorizados (ej: Google Drive corporativo, OneDrive), nunca en dispositivos personales o servicios no aprobados. Esto asegura que las políticas de seguridad y respaldo se apliquen automáticamente.\n\n[b]4. Control de Acceso Basado en Necesidad[/b]\nSolo debes acceder a la información que necesitas estrictamente para realizar tu trabajo (Principio de Mínimo Privilegio). Evita almacenar datos sensibles en ubicaciones accesibles por cualquier colega.\n\n[b]5. Flujo Seguro de Información[/b]\nSiempre utiliza los canales oficiales y seguros definidos por la empresa para el intercambio de información sensible, evitando métodos informales como WhatsApp o correos personales para documentos críticos.",
+    "estado": "Disponible",
+    "cartas": [
+        {
+            "imagen": 2,
+            "contexto": "Recibes un correo de un colega pidiéndote que le envíes la lista completa de precios de los nuevos proveedores a un contacto externo para cerrar un trato rápidamente.",
+            "texto_izquierda": "Enviar la lista completa de precios por correo",
+            "texto_derecha": "Enviar solo el resumen de precios y pedirle al colega que lo valide por Teams",
+            "correcto": 1.0,
+            "explicacion": "Compartir información financiera detallada sin validación formal expone a la PYME a riesgos de competencia desleal y posibles incumplimientos en la gestión de contratos. La opción correcta es usar canales seguros y validar con el colega antes de divulgar.",
+            "efecto_izquierda": {
+                "presupuesto": -30,
+                "confidencialidad": -45,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 5,
+            "contexto": "Tu jefe te pide que guardes un documento estratégico de la nueva línea de productos en tu carpeta personal de OneDrive para tenerlo a mano durante el viaje.",
+            "texto_izquierda": "Guardar el archivo en tu disco duro personal",
+            "texto_derecha": "Subir el archivo al repositorio seguro de la empresa en OneDrive",
+            "correcto": 1.0,
+            "explicacion": "Almacenar información confidencial en dispositivos personales rompe las políticas de seguridad corporativa y elimina los controles de acceso de la empresa, exponiendo a la PYME a riesgos de pérdida o robo.",
+            "efecto_izquierda": {
+                "presupuesto": -15,
+                "confidencialidad": -40,
+                "integridad": -20,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 3,
+            "contexto": "Estás en una cafetería y un cliente te pide que le muestres la planilla de cálculo con los costos internos para cerrar un trato.",
+            "texto_izquierda": "Mostrar la planilla directamente al cliente",
+            "texto_derecha": "Mostrar solo el resumen de costos y pedirle que se reúna en la oficina para revisar los detalles",
+            "correcto": 1.0,
+            "explicacion": "Revelar datos internos sin control es una violación directa del principio de confidencialidad. La opción correcta es mantener la información sensible oculta y solicitar una reunión formal para discutir los términos.",
+            "efecto_izquierda": {
+                "presupuesto": -25,
+                "confidencialidad": -40,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 1,
+            "contexto": "Un colega te pide que le envíes un documento de planificación importante por WhatsApp para agilizar el trabajo, ya que es más rápido.",
+            "texto_izquierda": "Enviar el documento completo por WhatsApp",
+            "texto_derecha": "Compartir el enlace seguro del documento desde Google Drive corporativo",
+            "correcto": 1.0,
+            "explicacion": "El uso de canales no seguros como WhatsApp para documentos confidenciales expone la información a riesgos de interceptación y pérdida. Siempre se deben usar los enlaces oficiales de la empresa para mantener la integridad de los datos.",
+            "efecto_izquierda": {
+                "presupuesto": -10,
+                "confidencialidad": -30,
+                "integridad": -20,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 0,
+            "contexto": "Al revisar un informe de ventas que contiene datos sensibles, te das cuenta de que el archivo fue guardado en una carpeta compartida con un colega que no tiene acceso a esa información.",
+            "texto_izquierda": "Asumir que es solo un error de la carpeta",
+            "texto_derecha": "Reportar inmediatamente al área de TI o al jefe para verificar los permisos de acceso",
+            "correcto": 1.0,
+            "explicacion": "Ignorar el error permite que la información sensible permanezca expuesta a personas no autorizadas. Reportar asegura que se apliquen las políticas de control de acceso y se mitiga el riesgo de fuga de datos.",
+            "efecto_izquierda": {
+                "presupuesto": -10,
+                "confidencialidad": -30,
+                "integridad": -20,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        }
+    ]
+}

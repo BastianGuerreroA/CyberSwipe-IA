@@ -1,0 +1,473 @@
+{
+  "capsulas": [
+    {
+      "id": 1,
+      "titulo": "Gestión de Contraseñas y MFA",
+      "subtitulo": "Aprende a crear claves robustas y usar la Autenticación Multifactor (MFA) para proteger tus cuentas corporativas.",
+      "mini_descripcion": "Crear contraseñas seguras y entender el valor de la autenticación de dos factores.",
+      "contenido_estudio": "[b]Conceptos Clave:[/b]\n* [b]Contraseñas Robustas[/b]: Deben tener al menos 14 caracteres. Usa frases largas en lugar de palabras simples.\n* [b]No Reutilización[/b]: Nunca uses la misma clave para el correo, el banco y las herramientas de trabajo.\n* [b]MFA (Autenticación Multifactor)[/b]: Es una segunda llave. Además de tu contraseña, necesitas un código temporal enviado a tu celular o generador para acceder a sistemas críticos. Esto es como tener dos candados en la puerta.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Tu jefe te pide que ingreses la contraseña de tu cuenta corporativa en un portal temporal para validar una transferencia urgente. Dice que es solo por unos minutos.",
+          "texto_izquierda": "Ingresar la clave",
+          "texto_derecha": "Llamar a su extensión",
+          "correcto": 1.0,
+          "explicacion": "Nunca compartas tu contraseña, incluso con tu jefe o un supuesto colega. Esto es una violación directa de la política de seguridad y expone a la empresa a fraude financiero inmediato.",
+          "efecto_izquierda": {
+            "presupuesto": 30,
+            "confidencialidad": -50,
+            "integridad": -20,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Recibes un correo que parece ser de tu banco pidiéndote que hagas clic en un enlace para actualizar tus datos de seguridad y ingresar tu clave completa.",
+          "texto_izquierda": "Hacer clic en el enlace",
+          "texto_derecha": "Ignorar el correo",
+          "correcto": -1.0,
+          "explicacion": "Los bancos nunca te pedirán claves completas por correo electrónico. Este es un intento de [b]Phishing[/b]. Siempre verifica la dirección del remitente y no hagas clic en enlaces sospechosos.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Tu compañero de trabajo te pide que le facilites tu clave para acceder a un sistema compartido porque 'está muy ocupado' y necesita terminar una tarea urgente.",
+          "texto_izquierda": "Dar la clave",
+          "texto_derecha": "Negarse a compartirla",
+          "correcto": 1.0,
+          "explicacion": "Compartir credenciales rompe las políticas de seguridad corporativas. Si necesitas acceso, usa los canales oficiales y no comprometas la integridad de los datos de la empresa.",
+          "efecto_izquierda": {
+            "presupuesto": -25,
+            "confidencialidad": -40,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te piden que uses una contraseña muy corta y fácil de recordar para el nuevo sistema, porque 'es más rápido' y no quieren complicarse con MFA.",
+          "texto_izquierda": "Usar clave corta",
+          "texto_derecha": "Usar clave larga",
+          "correcto": -1.0,
+          "explicacion": "Las contraseñas cortas son extremadamente fáciles de adivinar y son el primer punto débil para los atacantes. La longitud es la mejor defensa contra ataques de fuerza bruta.",
+          "efecto_izquierda": {
+            "presupuesto": 15,
+            "confidencialidad": -20,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Te piden que uses la misma contraseña para tu cuenta de trabajo y una cuenta personal porque 'son la misma persona' y es más cómodo.",
+          "texto_izquierda": "Usar la misma",
+          "texto_derecha": "Crear dos claves distintas",
+          "correcto": 1.0,
+          "explicacion": "La reutilización de contraseñas crea un riesgo masivo. Si una cuenta es comprometida, el atacante tiene acceso a todo tu entorno laboral y personal.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -40,
+            "integridad": -20,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te informan que el sistema de respaldo se cayó y te piden que ingreses la contraseña maestra para restaurar los archivos inmediatamente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Te piden que uses una contraseña muy larga y aleatoria para el sistema de la empresa, aunque te tome más tiempo escribirla.",
+          "texto_izquierda": "Usar clave corta",
+          "texto_derecha": "Usar clave larga",
+          "correcto": -1.0,
+          "explicacion": "Aunque parezca lento, una contraseña larga y aleatoria es la mejor defensa contra los ataques automatizados. La seguridad no debe sacrificar la comodidad.",
+          "efecto_izquierda": {
+            "presupuesto": 15,
+            "confidencialidad": -20,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te informan que el sistema de respaldo se cayó y te piden que ingreses la contraseña maestra para restaurar los archivos inmediatamente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Phishing e Ingeniería Social",
+      "subtitulo": "Detecta los engaños en correos y llamadas para proteger la información de tu empresa.",
+      "mini_descripcion": "Aprende a identificar las tácticas de phishing y pretexting usadas por atacantes.",
+      "contenido_estudio": "[b]Señales de Alerta:[/b]\n* [b]Urgencia Extrema[/b]: Los ataques siempre te presionan para actuar 'ahora mismo' sin verificar.\n* [b]Solicitud Inusual de Datos[/b]: Nunca te pedirán contraseñas, claves bancarias o información sensible por correo o llamada.\n* [b]Verificación del Remitente[/b]: Revisa la dirección de correo. Los atacantes usan dominios muy parecidos (ej: `empresa-soporte.com` en lugar de `empresa.com`).\n* [b]Errores Gramaticales y Tono Extraño[/b]: Aunque los correos parezcan profesionales, revisa si hay errores de ortografía o un tono que no coincide con la comunicación habitual de tu jefe o proveedor.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Recibes un correo de un supuesto colega pidiéndote urgentemente que le envíes una planilla de cálculo con datos confidenciales para 'revisar' en una reunión de emergencia.",
+          "texto_izquierda": "Enviar la planilla",
+          "texto_derecha": "Preguntar por el contexto",
+          "correcto": 1.0,
+          "explicacion": "Si el correo pide información sensible bajo presión, detente y verifica la identidad. Los ataques de [b]Spear Phishing[/b] buscan manipularte para que entregues datos sensibles.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -40,
+            "integridad": -20,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Un supuesto técnico llama a tu celular diciendo que hay un problema urgente con la red y te pide que instales una aplicación de acceso remoto para solucionarlo.",
+          "texto_izquierda": "Instalar la app",
+          "texto_derecha": "Descolgar y llamar al soporte oficial",
+          "correcto": 1.0,
+          "explicacion": "Los proveedores legítimos no te pedirán instalar software de acceso remoto por teléfono. Siempre verifica la identidad llamando a los números oficiales de la empresa antes de hacer cualquier cambio.",
+          "efecto_izquierda": {
+            "presupuesto": 25,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Un correo de un proveedor te pide que realices una transferencia inmediata a una cuenta nueva porque 'la auditoría exige el cambio de datos bancarios ahora'.",
+          "texto_izquierda": "Hacer la transferencia",
+          "texto_derecha": "Contactar al proveedor por teléfono",
+          "correcto": 1.0,
+          "explicacion": "Las solicitudes urgentes para cambiar datos financieros deben ser validadas fuera del correo electrónico. Esto es un clásico de [b]Pretexting[/b]. Siempre usa canales verificados para transacciones grandes.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -40,
+            "integridad": -20,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Recibes un correo con un enlace que parece ser de tu sistema de trabajo. Al pasar el mouse por encima, ves que la dirección es `soporte-empresa.net` en lugar de `empresa.cl`.",
+          "texto_izquierda": "Hacer clic",
+          "texto_derecha": "Borrar el correo",
+          "correcto": 1.0,
+          "explicacion": "La diferencia entre un dominio legítimo y uno falso es crucial. Siempre revisa la dirección completa del remitente antes de hacer clic en cualquier enlace.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Un colega te pide que le facilites tu usuario y contraseña para acceder a un archivo porque 'no tiene tiempo de buscarlo'.",
+          "texto_izquierda": "Dar las credenciales",
+          "texto_derecha": "Negarse a darlas",
+          "correcto": 1.0,
+          "explicacion": "Las contraseñas son privadas. Compartir tu acceso es una violación de la política de seguridad y pone en riesgo toda la información que tienes almacenada.",
+          "efecto_izquierda": {
+            "presupuesto": -25,
+            "confidencialidad": -40,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te envían un correo con un archivo adjunto que dice ser una factura urgente. Al abrirlo, descubres que es un archivo ejecutable (.exe) y el sistema te advierte de riesgo.",
+          "texto_izquierda": "Abrir el archivo",
+          "texto_derecha": "Eliminar el correo",
+          "correcto": 1.0,
+          "explicacion": "Los archivos adjuntos inesperados son una táctica común para distribuir [b]Malware[/b]. Nunca abras archivos de remitentes desconocidos o sospechosos.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Un colega te pide que hagas clic en un enlace para acceder a una plataforma de trabajo nueva, diciendo que es parte de una actualización obligatoria del sistema.",
+          "texto_izquierda": "Hacer clic",
+          "texto_derecha": "Preguntar por la política",
+          "correcto": 1.0,
+          "explicacion": "Las actualizaciones importantes siempre se comunican a través de canales oficiales y no mediante enlaces inesperados en correos. Siempre verifica la fuente antes de interactuar con cualquier enlace.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te llaman diciendo que eres un empleado de la empresa y te piden que les des tu clave para 'verificar' tu identidad. Te presionan con urgencia.",
+          "texto_izquierda": "Dar la clave",
+          "texto_derecha": "Colgar y verificar por teléfono",
+          "correcto": 1.0,
+          "explicacion": "Si alguien te pide credenciales por teléfono, cuelga inmediatamente. La verificación de identidad debe hacerse siempre a través de canales seguros y oficiales.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Respaldos y Protección de Equipos",
+      "subtitulo": "Asegura la continuidad del negocio mediante respaldos automáticos y el bloqueo de sesiones.",
+      "mini_descripcion": "Implementa copias de seguridad y bloquea tus equipos para prevenir pérdidas por ransomware o acceso no autorizado.",
+      "contenido_estudio": "[b]Respaldos Críticos:[/b]\n* [b]Regla 3-2-1[/b]: Tener al menos tres copias de tus datos, en dos tipos de medios diferentes, y una copia fuera del sitio (offline o en la nube). Esto es vital contra el [b]Ransomware[/b].\n* [b]Actualizaciones Constantes[/b]: Mantener todo el software (sistema operativo, antivirus) actualizado. Las actualizaciones corrigen las puertas que los atacantes usan para entrar.\n* [b]Bloqueo de Sesiones[/b]: Configura tus equipos para que se bloqueen automáticamente después de un corto periodo de inactividad. Esto evita que alguien acceda a tu trabajo si te levantas.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Una noche, el sistema de respaldo falla y te piden ingresar la contraseña maestra para restaurar los archivos inmediatamente antes de que se pierdan datos críticos del cliente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te informan que el sistema de respaldo se cayó y te piden ingresar la contraseña maestra para restaurar los archivos inmediatamente antes de que se pierdan datos críticos del cliente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Tu equipo de trabajo se queda sin batería y te piden que conectes el disco duro externo infectado para 'reparar' la falla rápidamente.",
+          "texto_izquierda": "Conectar el disco",
+          "texto_derecha": "Reportar el problema a TI",
+          "correcto": 1.0,
+          "explicacion": "Nunca conectes dispositivos desconocidos o sospechosos. Esto es un riesgo directo de infección por [b]Malware[/b]. Siempre reporta cualquier anomalía al equipo de TI.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Tu jefe te pide que uses la misma contraseña para tu cuenta de trabajo y una cuenta personal porque 'son la misma persona' y es más cómodo.",
+          "texto_izquierda": "Usar la misma",
+          "texto_derecha": "Crear dos claves distintas",
+          "correcto": 1.0,
+          "explicacion": "La reutilización de contraseñas crea un riesgo masivo. Si una cuenta es comprometida, el atacante tiene acceso a todo tu entorno laboral y personal.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -40,
+            "integridad": -20,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Te informan que el sistema de respaldo se cayó y te piden ingresar la contraseña maestra para restaurar los archivos inmediatamente antes de que se pierdan datos críticos del cliente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Te informan que el sistema de respaldo se cayó y te piden ingresar la contraseña maestra para restaurar los archivos inmediatamente antes de que se pierdan datos críticos del cliente.",
+          "texto_izquierda": "Restaurar con clave",
+          "texto_derecha": "Esperar instrucciones",
+          "correcto": 1.0,
+          "explicacion": "Nunca uses la contraseña maestra para restauraciones urgentes sin verificar la fuente. Esto puede ser una trampa de [b]Ransomware[/b]. Siempre sigue el protocolo oficial de recuperación.",
+          "efecto_izquierda": {
+            "presupuesto": 50,
+            "confidencialidad": -30,
+            "integridad": -10,
+            "disponibilidad": 10
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 10,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "context

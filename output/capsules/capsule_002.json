@@ -1,0 +1,110 @@
+{
+    "id": 2,
+    "titulo": "Phishing e Ingeniería Social",
+    "subtitulo": "Reconoce y detén los ataques de engaño que buscan robar información corporativa mediante la manipulación psicológica.",
+    "mini_descripcion": "Aprende a identificar las tácticas de ingeniería social (urgencia, autoridad) utilizadas en correos, mensajes y llamadas para proteger los activos de la PYME.",
+    "contenido_estudio": "[b]1. ¿Qué es el Phishing?[/b]\nEl Phishing es un intento de engaño donde el atacante se hace pasar por una entidad confiable (un banco, un proveedor o tu jefe) para que reveles información sensible, como contraseñas o datos bancarios.\n\n[b]2. Tácticas Psicológicas en Ataques[/b]\nLos atacantes explotan emociones humanas: usan la [b]Urgencia[/b] (pide acción inmediata), la [b]Autoridad[/b] (se hace pasar por un jefe o un ente regulador) y la [b]Curiosidad[/b] (te ofrecen algo atractivo). Estas tácticas buscan que ignores tu juicio crítico.\n\n[b]3. Señales de Alerta en Correos[/b]\nRevisa siempre el remitente, busca errores de ortografía o direcciones extrañas, y desconfía de enlaces que te piden iniciar sesión en portales conocidos; si tienes dudas, no hagas clic, sino contacta al remitente por un canal oficial.\n\n[b]4. Ingeniería Social (Pretexting)[/b]\nEl Pretexting es crear una historia falsa o un escenario convincente para manipularte. Por ejemplo, alguien llama diciendo ser del soporte TI pidiendo acceso remoto; esto se basa en la suplantación de identidad y busca explotar tu miedo a interrumpir el trabajo.\n\n[b]5. El Principio de Verificación[/b]\nAnte cualquier solicitud inusual que implique dinero, datos sensibles o acciones urgentes, aplica siempre el principio de verificación: detente, no actúes inmediatamente y verifica la solicitud por un canal oficial y separado (ej: llamar al número conocido del proveedor, no responder al correo sospechoso).",
+    "estado": "Disponible",
+    "cartas": [
+        {
+            "imagen": 6,
+            "contexto": "Recibes un correo electrónico que parece ser de tu jefe pidiéndote transferir $500.000 a un nuevo proveedor 'ahora mismo' porque está cerrando un negocio y no puede contestar llamadas.",
+            "texto_izquierda": "Haces la transferencia inmediatamente para evitar conflictos con tu jefatura",
+            "texto_derecha": "Esperas y llamas al jefe por teléfono para validar la solicitud de pago",
+            "correcto": 1.0,
+            "explicacion": "La opción correcta es esperar y llamar. Esto aplica el principio de verificación contra la [b]Autoridad[/b]. Los atacantes usan la urgencia y la autoridad para forzar acciones rápidas; validar por un canal oficial (teléfono) rompe la cadena del ataque.",
+            "efecto_izquierda": {
+                "presupuesto": 30,
+                "confidencialidad": -15,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 2,
+            "contexto": "Un colega de otra sucursal te escribe por WhatsApp pidiéndote compartir un documento confidencial del proyecto para 'agilizar la entrega' y dice que es urgente.",
+            "texto_izquierda": "Compartes el archivo directamente para no retrasar al compañero",
+            "texto_derecha": "Solicitas una validación formal a través del correo oficial de ese colega",
+            "correcto": 1.0,
+            "explicacion": "La opción correcta es solicitar la validación por correo oficial. Esto combate el [b]Phishing[/b] y el riesgo de compartir información sensible fuera de los canales seguros de la empresa, protegiendo la confidencialidad del proyecto.",
+            "efecto_izquierda": {
+                "presupuesto": 0,
+                "confidencialidad": -35,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 3,
+            "contexto": "Recibes un SMS que dice que tu cuenta bancaria está bloqueada y te pide hacer clic en un enlace para desbloquearla de inmediato.",
+            "texto_izquierda": "Haces clic en el enlace para evitar la suspensión de la cuenta",
+            "texto_derecha": "Ignoras el mensaje y llamas al banco por el número oficial para verificar el estado",
+            "correcto": 1.0,
+            "explicacion": "La opción correcta es ignorar el SMS y llamar al banco. Esto combate el [b]Smishing[/b]. Los mensajes de texto urgentes con enlaces son una táctica común de [b]Vishing[/b] por SMS que busca robar tus credenciales bancarias.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -40,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 1,
+            "contexto": "Un supuesto técnico llama por teléfono diciendo ser del soporte TI y solicita acceso remoto a tu computador para instalar un 'software de control' urgente.",
+            "texto_izquierda": "Permites el acceso remoto para solucionar el problema rápido",
+            "texto_derecha": "Descuidas la solicitud y reportas inmediatamente al equipo de soporte oficial",
+            "correcto": 1.0,
+            "explicacion": "La opción correcta es reportar inmediatamente. Esto combate el [b]Pretexting[/b]. Los atacantes usan la autoridad del soporte TI para explotar tu miedo a causar un retraso operativo y obtener acceso no autorizado.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -40,
+                "integridad": -10,
+                "disponibilidad": -20
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 5,
+            "contexto": "Recibes un folleto impreso con un código QR que te pide escanearlo para acceder a una encuesta de 'beneficios' y te pide tus datos personales.",
+            "texto_izquierda": "Escaneas el código QR porque parece legítimo",
+            "texto_derecha": "No escaneas el código y consultas al departamento de RRHH sobre la validez del material",
+            "correcto": 1.0,
+            "explicacion": "La opción correcta es no escanearlo y consultar a RRHH. Esto combate el [b]QRphishing[/b]. Los códigos QR son una forma fácil de redirigir a sitios maliciosos que roban datos personales mediante la suplantación de identidad.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -40,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 25,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        }
+    ]
+}

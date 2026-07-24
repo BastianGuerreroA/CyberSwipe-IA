@@ -1,0 +1,13 @@
+{
+    "generation_id": "gen_e30602f6",
+    "timestamp": "2026-07-22T22:14:16.997959Z",
+    "model_used": "gemma4:e2b",
+    "status": "partial",
+    "errors": [
+        "Fallo al generar Cápsula #2: Error de sintaxis JSON: Expecting property name enclosed in double quotes: line 2 column 11 (char 12)",
+        "Fallo al generar Cápsula #3: Error de sintaxis JSON: Expecting property name enclosed in double quotes: line 2 column 11 (char 12)"
+    ],
+    "capsules_requested": 3,
+    "capsules_generated": 1,
+    "duration_seconds": 525.16
+}

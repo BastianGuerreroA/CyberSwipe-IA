@@ -1,0 +1,294 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Contraseñas y Autenticación Segura",
+            "subtitulo": "Aprende a crear claves robustas y usar la doble seguridad (MFA) para proteger los datos de tu empresa.",
+            "mini_descripcion": "Comprender por qué las contraseñas débiles son un riesgo y cómo la Autenticación Multifactor previene ataques de ingeniería social.",
+            "contenido_estudio": "Las credenciales de acceso son el punto más débil de cualquier sistema. La seguridad comienza con la gestión de contraseñas.\n\nConceptos Clave:\n* Contraseñas Robustas: Deben ser largas (mínimo 14 caracteres) y únicas para cada servicio. Nunca uses la misma clave para el correo corporativo y cuentas personales.\n* Autenticación Multifactor (MFA): Es una segunda llave de seguridad. Además de tu contraseña, se requiere un segundo factor (un código enviado a tu celular o generado por una app). Esto es obligatorio para acceder a sistemas críticos como el correo institucional o la banca.\n* Gestión de Acceso: Si te ausentas, debes bloquear siempre tu sesión con `Ctrl+Alt+L` (o equivalente) y asegurar que nadie pueda iniciar sesión en tu equipo.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo de un supuesto colega pidiéndote urgentemente la contraseña del sistema para 'resolver un error' y te presiona para que la envíes por chat.",
+                    "texto_izquierda": "Enviar la clave",
+                    "texto_derecha": "Rechazar la solicitud",
+                    "correcto": -1.0,
+                    "explicacion": "Nunca compartas contraseñas bajo ninguna circunstancia, incluso si parece ser un colega. Esto es una violación directa de la política de seguridad y expone a la empresa al riesgo de que el atacante acceda a todos los sistemas.",
+                    "efecto_izquierda": {
+                        "presupuesto": 20,
+                        "confidencialidad": -40,
+                        "integridad": -15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 30,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un proveedor te llama diciendo que necesita tu usuario y contraseña para actualizar la información de facturación urgente, prometiendo que es un proceso rápido.",
+                    "texto_izquierda": "Dar las credenciales",
+                    "texto_derecha": "Solicitar validación por teléfono",
+                    "correcto": 1.0,
+                    "explicacion": "Los proveedores legítimos no te pedirán contraseñas por teléfono. Siempre exige una verificación formal o usa canales seguros para validar cualquier solicitud de datos sensibles.",
+                    "efecto_izquierda": {
+                        "presupuesto": -30,
+                        "confidencialidad": -10,
+                        "integridad": 5,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 30,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Tu jefe te pide que uses una contraseña corta y fácil de recordar para el nuevo sistema, diciendo que es más rápido de usar.",
+                    "texto_izquierda": "Usar la clave fácil",
+                    "texto_derecha": "Usar una clave larga y compleja",
+                    "correcto": -1.0,
+                    "explicacion": "Las contraseñas cortas son fáciles de adivinar y se rompen rápidamente. La seguridad no es un obstáculo; es una capa extra. Las claves largas y complejas requieren más esfuerzo al atacante.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -25,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 30,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "El equipo de TI te pide que instales un programa remoto para 'arreglar' una falla urgente en tu computador y te pide la contraseña de administrador.",
+                    "texto_izquierda": "Instalar el programa",
+                    "texto_derecha": "Rechazar la instalación",
+                    "correcto": -1.0,
+                    "explicacion": "Nunca permitas que personal no autorizado acceda a tu equipo o credenciales. Las herramientas de soporte técnico legítimas nunca te pedirán contraseñas sensibles por teléfono.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": -10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 30,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Phishing y Ataques de Ingeniería Social",
+            "subtitulo": "Reconoce las tácticas de engaño para proteger la información de tu empresa.",
+            "mini_descripcion": "Aprende a identificar correos, mensajes y llamadas falsos que buscan robar datos o instalar malware.",
+            "contenido_estudio": "El Phishing y la Ingeniería Social son ataques diseñados para explotar la confianza y la urgencia humana. Los atacantes se disfrazan de personas o entidades legítimas (jefatura, soporte técnico, bancos) para manipularte y hacer que reveles información sensible o realices acciones riesgosas.\n\nSeñales de Alerta:\n* Urgencia extrema: Te presionan para actuar 'ahora mismo' sin tiempo para verificar. \n* Solicitud inusual: Piden datos sensibles (contraseñas, claves) por correo o mensaje.\n* Enlaces sospechosos: Los correos contienen enlaces que no coinciden con el dominio oficial de la empresa.\n* Errores gramaticales o formato extraño en el mensaje.\n\nLa regla de oro es: Si algo parece demasiado bueno para ser verdad, o si te genera mucha presión, detente y verifica siempre por un canal seguro (ej: llamar a tu jefe directamente por teléfono, no responder al correo).\n\nRecuerda que la seguridad de los datos de la PYME depende de tu capacidad para detener estos ataques antes de que se materialicen.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo urgente de 'Soporte TI' pidiéndote que hagas clic en un enlace para actualizar tu contraseña inmediatamente, o te amenazan con suspender el acceso a la red.",
+                    "texto_izquierda": "Hacer clic y actualizar",
+                    "texto_derecha": "Llamar al soporte oficial",
+                    "correcto": -1.0,
+                    "explicacion": "Nunca hagas clic en enlaces de correos sospechosos que piden credenciales. Los atacantes usan este método para robar tus claves. La acción correcta es verificar la solicitud por un canal seguro (ej: llamar al departamento de TI o a tu jefe) antes de actuar.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un mensaje de WhatsApp parece ser de tu jefe pidiéndote transferir $300.000 a una cuenta nueva 'urgente' para cerrar un negocio antes del mediodía.",
+                    "texto_izquierda": "Transferir inmediatamente",
+                    "texto_derecha": "Llamar a tu jefe por teléfono",
+                    "correcto": 1.0,
+                    "explicacion": "La urgencia es una táctica de ingeniería social. Nunca realices transferencias o pagos grandes basados solo en mensajes no verificados. La acción segura es detener la transacción y validar la solicitud por un canal que sepas que es legítimo (teléfono directo).",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Un colega te envía un archivo adjunto llamado 'Factura_Urgente.xlsm' que dice ser de un proveedor nuevo y te pide abrirlo para revisar los detalles.",
+                    "texto_izquierda": "Abrir el archivo",
+                    "texto_derecha": "Rechazar el archivo",
+                    "correcto": -1.0,
+                    "explicacion": "Los archivos con extensiones extrañas o macros (como .xlsm) son una forma común de distribuir malware. Nunca abras documentos adjuntos de remitentes desconocidos sin una verificación previa del proveedor.",
+                    "efecto_izquierda": {
+                        "presupuesto": 20,
+                        "confidencialidad": -30,
+                        "integridad": -15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un supuesto técnico llama diciendo que hay una falla crítica en el sistema y necesita tu usuario y contraseña para hacer una 'reparación remota' urgente.",
+                    "texto_izquierda": "Dar las credenciales",
+                    "texto_derecha": "Descolgar la llamada",
+                    "correcto": 1.0,
+                    "explicacion": "El soporte técnico legítimo nunca te pedirá tu contraseña por teléfono. Esta es una táctica de suplantación de identidad (Pretexting). Si alguien pide credenciales, siempre cuelga y contacta al departamento interno de TI para verificar la solicitud.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Seguridad de Dispositivos y Redes",
+            "subtitulo": "Protege tu equipo corporativo contra riesgos físicos y digitales en el entorno laboral.",
+            "mini_descripcion": "Aprende a manejar dispositivos USB, redes públicas y mantener tus sistemas actualizados para evitar infecciones y pérdidas de datos.",
+            "contenido_estudio": "La seguridad del entorno de trabajo depende de cómo manejas tus dispositivos y la red. Los riesgos más comunes provienen de la conexión física y las actualizaciones desactualizadas.\n\nRiesgos Físicos:\n* Dispositivos USB desconocidos son una puerta de entrada para malware. Nunca conectes memorias externas a tu computador de trabajo sin autorización explícita del área de TI.\n* Las redes Wi-Fi públicas (cafeterías, aeropuertos) no son seguras para manejar información sensible. Si debes usarla, utiliza siempre una VPN corporativa.\n\nRiesgos de Software:\n* Mantener el sistema operativo y todas las aplicaciones actualizadas es crucial. Las actualizaciones suelen incluir parches de seguridad que cierran agujeros que los atacantes podrían explotar.\n* El uso de contraseñas débiles o la falta de Autenticación Multifactor (MFA) hace que un solo error comprometa toda la información de la empresa.\n\nLa regla de oro es: si no estás seguro de una fuente, dispositivo o solicitud, detente y consulta a tu jefe o al equipo de TI.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Un compañero te ofrece un pendrive USB que dice 'Planillas_2024.zip' y te pide que lo conectes para 'verificar la información rápidamente'.",
+                    "texto_izquierda": "Conectarlo inmediatamente",
+                    "texto_derecha": "Rechazar la solicitud",
+                    "correcto": -1.0,
+                    "explicacion": "Nunca conectes dispositivos USB desconocidos a tu equipo de trabajo. Esto es un patrón clásico de Baiting (CAPEC-294). El archivo podría contener malware que infecte toda la red corporativa y paralizar nuestras operaciones.",
+                    "efecto_izquierda": {
+                        "presupuesto": 30,
+                        "confidencialidad": -50,
+                        "integridad": -20,
+                        "disponibilidad": -10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Estás en una cafetería y quieres revisar un documento sensible de la empresa. Conectas tu celular a la Wi-Fi pública para acceder al correo.",
+                    "texto_izquierda": "Acceder sin VPN",
+                    "texto_derecha": "Usar la VPN corporativa",
+                    "correcto": 1.0,
+                    "explicacion": "Las redes públicas son inseguras y pueden ser interceptadas por atacantes (Man-in-the-Middle). Usar la VPN es como poner un túnel seguro a través de internet, protegiendo tu información sensible de miradas no deseadas.",
+                    "efecto_izquierda": {
+                        "presupuesto": 10,
+                        "confidencialidad": -25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes una notificación de que tu sistema operativo y el antivirus tienen actualizaciones pendientes, pero tienes muchas tareas urgentes.",
+                    "texto_izquierda": "Ignorar las notificaciones",
+                    "texto_derecha": "Instalar la actualización ahora",
+                    "correcto": -1.0,
+                    "explicacion": "Ignorar las actualizaciones deja vulnerabilidades abiertas que los atacantes explotan constantemente. Las actualizaciones son parches de seguridad esenciales para proteger la integridad de nuestros sistemas contra amenazas conocidas.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": -10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "El equipo de TI te pide que desactives temporalmente el firewall para instalar un programa de diagnóstico urgente.",
+                    "texto_izquierda": "Desactivarlo",
+                    "texto_derecha": "Consultar al jefe primero",
+                    "correcto": 1.0,
+                    "explicacion": "Nunca se debe desactivar el firewall sin una justificación clara y previa aprobación. Esto abre la puerta a que cualquier amenaza externa entre directamente a nuestra red corporativa.",
+                    "efecto_izquierda": {
+                        "presupuesto": 20,
+                        "confidencialidad": -40,
+                        "integridad": -15,
+                        "disponibilidad": -5
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Tu jefe te pide realizar una transferencia urgente a un proveedor nuevo, diciendo que es para cerrar un trato y no tiene tiempo de llamar al banco.",
+                    "texto_izquierda": "Hacer la transferencia",
+                    "texto_derecha": "Esperar la llamada",
+                    "correcto": 1.0,
+                    "explicacion": "Este escenario explota el Pretexting (CAPEC-403). La urgencia es una táctica de ingeniería social. Siempre valida transacciones grandes o sensibles por canales seguros y verificados para evitar fraudes financieros a la empresa.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -40,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 10,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

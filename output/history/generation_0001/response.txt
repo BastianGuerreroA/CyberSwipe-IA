@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-06T20:00:00Z",
+  "capsules": [
+    {
+      "id": "capsule_sqli_01",
+      "title": "Inyección SQL: El Riesgo Oculto",
+      "topic": "OWASP Top 10: Inyecciones SQL",
+      "difficulty": "Medio",
+      "cards": [
+        {
+          "id": "card_sqli_01_01",
+          "title": "Input de Búsqueda Vulnerable",
+          "description": "Estás desarrollando una funcionalidad de búsqueda en la aplicación web. El código utiliza directamente la entrada del usuario para construir una consulta SQL sin sanitización.",
+          "category": "Seguridad Web",
+          "level": 1,
+          "options": [
+            {
+              "text": "Implementar filtros básicos de texto antes de ejecutar la consulta.",
+              "effects": {
+                "reputation": 5,
+                "budget": 0,
+                "security_level": 10
+              },
+              "feedback": "¡Correcto! Implementar *prepared statements* o consultas parametrizadas es la defensa primaria contra las inyecciones SQL. Esto separa los datos de la lógica del comando SQL."
+            },
+            {
+              "text": "Añadir una validación simple para asegurar que el input solo contenga caracteres alfanuméricos.",
+              "effects": {
+                "reputation": -5,
+                "budget": 0,
+                "security_level": 5
+              },
+              "feedback": "Incorrecto. La validación de entrada (input validation) es una capa defensiva útil, pero no previene la inyección SQL si el input se concatena directamente en la consulta. Debes tratar la entrada como potencialmente maliciosa."
+            }
+          ]
+        },
+        {
+          "id": "card_sqli_01_02",
+          "title": "El Ataque de Inyección",
+          "description": "Un atacante introduce una cadena SQL maliciosa en el campo de búsqueda para extraer datos sensibles de la base de datos.",
+          "category": "Seguridad Web",
+          "level": 2,
+          "options": [
+            {
+              "text": "El servidor ejecuta la consulta tal como fue escrita por el usuario.",
+              "effects": {
+                "reputation": -30,
+                "budget": -50,
+                "security_level": -20
+              },
+              "feedback": "¡Incorrecto! Esto es la esencia de la vulnerabilidad. El servidor debe tratar toda entrada del usuario como datos y no como comandos ejecutables."
+            },
+            {
+              "text": "El sistema utiliza funciones de escape para neutralizar los caracteres especiales antes de la ejecución.",
+              "effects": {
+                "reputation": 15,
+                "budget": 0,
+                "security_level": 25
+              },
+              "feedback": "¡Correcto! El uso correcto de funciones de escape o consultas parametrizadas es fundamental para prevenir que los datos del usuario se interpreten como comandos SQL."
+            }
+          ]
+        },
+        {
+          "id": "card_sqli_01_03",
+          "title": "Manejo de Credenciales DB",
+          "description": "La aplicación web tiene acceso a la base de datos con credenciales de administrador que

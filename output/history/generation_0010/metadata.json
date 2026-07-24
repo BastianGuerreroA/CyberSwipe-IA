@@ -1,0 +1,12 @@
+{
+    "generation_id": "gen_f5e888b7",
+    "timestamp": "2026-07-21T01:05:18.558347Z",
+    "model_used": "gemma4:e2b",
+    "status": "failed",
+    "errors": [
+        "Error en la ejecución del pipeline: No se pudo establecer comunicación con Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)"
+    ],
+    "capsules_requested": 1,
+    "capsules_generated": 0,
+    "duration_seconds": 602.25
+}

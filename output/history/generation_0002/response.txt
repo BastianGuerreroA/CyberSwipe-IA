@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-06T20:00:00Z",
+  "capsules": [
+    {
+      "id": "capsule_sqli_01",
+      "title": "Inyección SQL: El Riesgo Oculto",
+      "topic": "OWASP Top 10: Inyecciones SQL (A03)",
+      "difficulty": "Medio",
+      "cards": [
+        {
+          "id": "card_sqli_01_01",
+          "title": "Input de Usuario en Login",
+          "description": "Estás desarrollando una aplicación web y utilizas la entrada del campo de nombre de usuario directamente en una consulta SQL para autenticar al usuario.",
+          "category": "Seguridad Web",
+          "level": 1,
+          "options": [
+            {
+              "text": "Concatenar la entrada directamente a la cadena SQL y ejecutarla.",
+              "effects": {
+                "reputation": -25,
+                "budget": 0,
+                "security_level": -30
+              },
+              "feedback": "¡Incorrecto! Esta práctica es la causa directa de la Inyección SQL. Al concatenar entradas del usuario directamente en la consulta, permites que el atacante inserte comandos SQL maliciosos."
+            },
+            {
+              "text": "Utilizar sentencias preparadas (Prepared Statements).",
+              "effects": {
+                "reputation": 20,
+                "budget": 5,
+                "security_level": 30
+              },
+              "feedback": "¡Correcto! Las sentencias preparadas separan la lógica de la consulta de los datos de entrada. Esto evita que el input del usuario se interprete como código SQL ejecutable, mitigando la Inyección."
+            }
+          ]
+        },
+        {
+          "id": "card_sqli_01_02",
+          "title": "Filtrado Deficiente de Datos",
+          "description": "Implementas una validación de entrada para prevenir inyecciones, pero permites que caracteres especiales como comillas simples (') o punto y coma (;) pasen a la base de datos.",
+          "category": "Seguridad Web",
+          "level": 2,
+          "options": [
+            {
+              "text": "Implementar una validación estricta de entrada (Whitelist).",
+              "effects": {
+                "reputation": 15,
+                "budget": 0,
+                "security_level": 25
+              },
+              "feedback": "¡Correcto! La validación estricta (whitelist) asegura que solo los caracteres permitidos se procesen. Esto es fundamental para prevenir la inyección de comandos."
+            },
+            {
+              "text": "Confiar únicamente en el filtrado de salida del servidor.",
+              "effects": {
+                "reputation": -10,
+                "budget": 0,
+                "security_level": -5
+              },
+              "feedback": "¡Incorrecto! Confiar solo en el filtrado de salida es peligroso. Debes validar y sanitizar la entrada en el punto de origen para prevenir que los datos maliciosos lleguen al sistema."
+            }
+          ]
+        },
+        {
+          "id": "card_sqli_01_03",
+          "title": "Manejo de Errores SQL",
+          "description": "Una consulta falla y el servidor devuelve un mensaje de error detallado que revela la estructura interna de la base de datos.",
+          "category": "Seguridad Web",
+          "level": 2,
+          "options": [
+            {
+              "text": "Mostrar el error completo al usuario final.",
+              "effects": {
+                "reputation": -15,
+                "budget": 0,
+                "security_level": -10
+              },
+              "feedback": "¡Incorrecto! Mostrar errores detallados expone información sensible sobre la estructura de la base de datos. Debes mostrar un mensaje genérico al usuario y registrar el error internamente."
+            },
+            {
+              "text": "Mostrar un mensaje de error genérico y registrar el detalle en logs del servidor.",
+              "effects": {
+                "reputation": 10,
+                "budget": 0,
+                "security_level": 20
+              },
+              "feedback": "¡Correcto! Esta es la práctica recomendada. El usuario no debe ver detalles técnicos, pero el equipo de seguridad debe tener los logs para investigar y corregir la vulnerabilidad."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

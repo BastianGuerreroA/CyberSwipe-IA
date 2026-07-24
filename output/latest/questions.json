@@ -1,0 +1,554 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Gestión Segura de Credenciales y MFA",
+            "subtitulo": "Aprende a proteger tus accesos corporativos con passphrases, gestores y MFA en entornos diversos.",
+            "mini_descripcion": "Aplica procedimientos seguros para la creación, almacenamiento y uso de contraseñas y autenticación multifactor.",
+            "contenido_estudio": "[b]1. Passphrases de Alta Longitud[/b]\nCombina 4 o más palabras aleatorias separadas para formar frases largas (+14 caracteres), fáciles de recordar pero imposibles de descifrar por fuerza bruta.\n\n[b]2. Gestores de Contraseñas Autorizados[/b]\nUtiliza la bóveda digital de la empresa para almacenar y generar claves complejas. Nunca guardes contraseñas en archivos de texto, navegadores sin clave o notas impresas.\n\n[b]3. Aislamiento estricto Laboral vs Personal[/b]\nNunca utilices la misma contraseña corporativa para tus redes sociales o cuentas personales. Si un servicio externo sufre una fuga, comprometerá los accesos de la empresa.\n\n[b]4. Autenticación Multifactor (MFA) mediante App[/b]\nPrioriza aplicaciones autenticadoras (Google/Microsoft Authenticator) frente a códigos SMS, ya que los SMS son vulnerables a la clonación de SIM (SIM swapping).\n\n[b]5. Bloqueo Manual de Sesión (Win + L)[/b]\nAl levantarte de tu escritorio en teletrabajo o en la oficina, presiona [b]Win + L[/b] para impedir que visitantes o terceros observen o utilicen tus sesiones abiertas.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Estás creando la clave para el nuevo sistema de facturación en la oficina y necesitas una contraseña fácil de recordar sin anotarla.",
+                    "texto_izquierda": "Usar una frase larga de 4 palabras como 'gato.sol.cafe.verde'",
+                    "texto_derecha": "Usar tu rut y el nombre de la empresa con un signo al final",
+                    "correcto": -1.0,
+                    "explicacion": "Una passphrase larga de 4 palabras aleatorias supera los 16 caracteres y es matemáticamente mucho más segura contra ataques de fuerza bruta que usar datos predecibles de la empresa.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": -10,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "En tu jornada de teletrabajo, tienes que manejar 8 accesos a portales de proveedores distintos y te cuesta memorizarlos todos.",
+                    "texto_izquierda": "Guardar las claves en una hoja de cálculo protegida en tu escritorio",
+                    "texto_derecha": "Guardar las claves en la aplicación del gestor de contraseñas corporativo",
+                    "correcto": 1.0,
+                    "explicacion": "El gestor de contraseñas corporativo cifra la bóveda de claves bajo un único acceso protegido. Dejar planillas en el escritorio expone las claves a malware o sincronizaciones no deseadas.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -25,
+                        "integridad": -15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Estás registrándote en un sitio de compras personales y el sistema pide crear una clave. Tienes la tentación de usar la misma contraseña de tu correo corporativo.",
+                    "texto_izquierda": "Usar la misma clave corporativa para no olvidarla",
+                    "texto_derecha": "Generar una contraseña única mediante el gestor para esa tienda",
+                    "correcto": 1.0,
+                    "explicacion": "Reutilizar la clave corporativa en tiendas externas expone a la empresa: si la tienda sufre una filtración de datos, los atacantes probarán esa clave en los sistemas del negocio.",
+                    "efecto_izquierda": {
+                        "presupuesto": -20,
+                        "confidencialidad": -40,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Al configurar el doble factor de acceso a la plataforma bancaria de la PYME, la plataforma te da a elegir entre recibir SMS o usar una App Autenticadora.",
+                    "texto_izquierda": "Elegir la verificación por App Autenticadora móvil",
+                    "texto_derecha": "Elegir mensajes de texto SMS por ser más familiar",
+                    "correcto": -1.0,
+                    "explicacion": "Las aplicaciones autenticadoras generan códigos locales seguros en el dispositivo. Los SMS son vulnerables a la clonación de tarjeta SIM (SIM swapping) por parte de delincuentes.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": -15,
+                        "confidencialidad": -20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Estás trabajando en una cafetería durante una reunión de negocios y te levantas 2 minutos a retirar un café al mostrador.",
+                    "texto_izquierda": "Dejar la laptop abierta ya que vuelves de inmediato",
+                    "texto_derecha": "Bloquear la pantalla con el atajo Win + L antes de ponerte de pie",
+                    "correcto": 1.0,
+                    "explicacion": "Bloquear la sesión con Win + L evita que cualquier persona cercana observe la pantalla (Shoulder Surfing) o acceda físicamente a tus sistemas corporativos abiertos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Phishing e Ingeniería Social",
+            "subtitulo": "Reconoce y detén los ataques de engaño que buscan robar información corporativa mediante la manipulación psicológica.",
+            "mini_descripcion": "Aprende a identificar las tácticas de ingeniería social (urgencia, autoridad) utilizadas en correos, mensajes y llamadas para proteger los activos de la PYME.",
+            "contenido_estudio": "[b]1. ¿Qué es el Phishing?[/b]\nEl Phishing es un intento de engaño donde el atacante se hace pasar por una entidad confiable (un banco, un proveedor o tu jefe) para que reveles información sensible, como contraseñas o datos bancarios.\n\n[b]2. Tácticas Psicológicas en Ataques[/b]\nLos atacantes explotan emociones humanas: usan la [b]Urgencia[/b] (pide acción inmediata), la [b]Autoridad[/b] (se hace pasar por un jefe o un ente regulador) y la [b]Curiosidad[/b] (te ofrecen algo atractivo). Estas tácticas buscan que ignores tu juicio crítico.\n\n[b]3. Señales de Alerta en Correos[/b]\nRevisa siempre el remitente, busca errores de ortografía o direcciones extrañas, y desconfía de enlaces que te piden iniciar sesión en portales conocidos; si tienes dudas, no hagas clic, sino contacta al remitente por un canal oficial.\n\n[b]4. Ingeniería Social (Pretexting)[/b]\nEl Pretexting es crear una historia falsa o un escenario convincente para manipularte. Por ejemplo, alguien llama diciendo ser del soporte TI pidiendo acceso remoto; esto se basa en la suplantación de identidad y busca explotar tu miedo a interrumpir el trabajo.\n\n[b]5. El Principio de Verificación[/b]\nAnte cualquier solicitud inusual que implique dinero, datos sensibles o acciones urgentes, aplica siempre el principio de verificación: detente, no actúes inmediatamente y verifica la solicitud por un canal oficial y separado (ej: llamar al número conocido del proveedor, no responder al correo sospechoso).",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo electrónico que parece ser de tu jefe pidiéndote transferir $500.000 a un nuevo proveedor 'ahora mismo' porque está cerrando un negocio y no puede contestar llamadas.",
+                    "texto_izquierda": "Haces la transferencia inmediatamente para evitar conflictos con tu jefatura",
+                    "texto_derecha": "Esperas y llamas al jefe por teléfono para validar la solicitud de pago",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es esperar y llamar. Esto aplica el principio de verificación contra la [b]Autoridad[/b]. Los atacantes usan la urgencia y la autoridad para forzar acciones rápidas; validar por un canal oficial (teléfono) rompe la cadena del ataque.",
+                    "efecto_izquierda": {
+                        "presupuesto": 30,
+                        "confidencialidad": -15,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un colega de otra sucursal te escribe por WhatsApp pidiéndote compartir un documento confidencial del proyecto para 'agilizar la entrega' y dice que es urgente.",
+                    "texto_izquierda": "Compartes el archivo directamente para no retrasar al compañero",
+                    "texto_derecha": "Solicitas una validación formal a través del correo oficial de ese colega",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es solicitar la validación por correo oficial. Esto combate el [b]Phishing[/b] y el riesgo de compartir información sensible fuera de los canales seguros de la empresa, protegiendo la confidencialidad del proyecto.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -35,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un SMS que dice que tu cuenta bancaria está bloqueada y te pide hacer clic en un enlace para desbloquearla de inmediato.",
+                    "texto_izquierda": "Haces clic en el enlace para evitar la suspensión de la cuenta",
+                    "texto_derecha": "Ignoras el mensaje y llamas al banco por el número oficial para verificar el estado",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es ignorar el SMS y llamar al banco. Esto combate el [b]Smishing[/b]. Los mensajes de texto urgentes con enlaces son una táctica común de [b]Vishing[/b] por SMS que busca robar tus credenciales bancarias.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -40,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un supuesto técnico llama por teléfono diciendo ser del soporte TI y solicita acceso remoto a tu computador para instalar un 'software de control' urgente.",
+                    "texto_izquierda": "Permites el acceso remoto para solucionar el problema rápido",
+                    "texto_derecha": "Descuidas la solicitud y reportas inmediatamente al equipo de soporte oficial",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es reportar inmediatamente. Esto combate el [b]Pretexting[/b]. Los atacantes usan la autoridad del soporte TI para explotar tu miedo a causar un retraso operativo y obtener acceso no autorizado.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -40,
+                        "integridad": -10,
+                        "disponibilidad": -20
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un folleto impreso con un código QR que te pide escanearlo para acceder a una encuesta de 'beneficios' y te pide tus datos personales.",
+                    "texto_izquierda": "Escaneas el código QR porque parece legítimo",
+                    "texto_derecha": "No escaneas el código y consultas al departamento de RRHH sobre la validez del material",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es no escanearlo y consultar a RRHH. Esto combate el [b]QRphishing[/b]. Los códigos QR son una forma fácil de redirigir a sitios maliciosos que roban datos personales mediante la suplantación de identidad.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -40,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Protección del Entorno de Trabajo y Dispositivos",
+            "subtitulo": "Asegura tus dispositivos y el espacio físico para prevenir accesos no autorizados y riesgos físicos.",
+            "mini_descripcion": "Aprende a aplicar las salvaguardas básicas para proteger tu equipo, redes y la información sensible en cualquier entorno laboral.",
+            "contenido_estudio": "[b]1. Inventario de Activos Físicos[/b]\nDebes saber exactamente qué dispositivos corporativos tienes (laptops, celulares) y dónde están ubicados. Esto es el primer paso para controlar quién tiene acceso a la información.\n\n[b]2. Control de Dispositivos Externos (USB)[/b]\nNunca conectes memorias USB desconocidas o no autorizadas a tu equipo corporativo. Estos dispositivos pueden introducir malware directamente en la red interna de la PYME.\n\n[b]3. Seguridad de Red y Wi-Fi Pública[/b]\nEvita realizar operaciones sensibles (acceso a sistemas, manejo de datos financieros) cuando estés conectado a redes Wi-Fi públicas. Si debes hacerlo, utiliza siempre una VPN corporativa.\n\n[b]4. Gestión de Actualizaciones (Parches)[/b]\nLas actualizaciones del sistema operativo y las aplicaciones no son solo mejoras; corrigen fallas de seguridad conocidas que los atacantes explotan constantemente. Ignorar parches deja puertas abiertas al malware.\n\n[b]5. Bloqueo Físico y Entorno (Tailgating)[/b]\nSé consciente de tu entorno físico. Evita dejar pantallas abiertas o documentos sensibles visibles, especialmente en áreas compartidas como cafeterías o recepción, para prevenir el 'Shoulder Surfing' o el 'Tailgating'.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Estás conectando un pendrive promocional que te dieron en una feria a tu computador de la oficina y quieres copiar unos archivos rápidamente.",
+                    "texto_izquierda": "Conectar el pendrive inmediatamente para no perder tiempo",
+                    "texto_derecha": "Consultar al área de TI antes de conectar cualquier dispositivo externo",
+                    "correcto": 1.0,
+                    "explicacion": "Conectar dispositivos desconocidos es una vía directa para introducir malware o spyware en la red corporativa. El pendrive puede contener código malicioso que compromete toda la infraestructura de la PYME.",
+                    "efecto_izquierda": {
+                        "presupuesto": -30,
+                        "confidencialidad": -45,
+                        "integridad": -20,
+                        "disponibilidad": 10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Estás trabajando en una cafetería durante una reunión de negocios y te levantas 2 minutos a retirar un café al mostrador.",
+                    "texto_izquierda": "Dejar la laptop abierta ya que vuelves de inmediato",
+                    "texto_derecha": "Bloquear la pantalla con el atajo Win + L antes de ponerte de pie",
+                    "correcto": 1.0,
+                    "explicacion": "Dejar la sesión abierta expone tus sistemas al 'Shoulder Surfing'. Al bloquear la pantalla, evitas que cualquier persona observe o acceda físicamente a tus datos sensibles mientras te ausentas.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Estás conectado a una red Wi-Fi pública en un aeropuerto y necesitas revisar unos documentos de la empresa para agilizar el trámite.",
+                    "texto_izquierda": "Abrir el documento directamente para ahorrar tiempo",
+                    "texto_derecha": "Activar la VPN corporativa antes de acceder a cualquier recurso interno",
+                    "correcto": 1.0,
+                    "explicacion": "Acceder a sistemas sensibles sin una VPN expone toda la información a posibles ataques de interceptación en la red pública. La VPN actúa como un túnel seguro para proteger los datos de la PYME.",
+                    "efecto_izquierda": {
+                        "presupuesto": -15,
+                        "confidencialidad": -40,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu equipo corporativo tiene una notificación de actualización crítica del sistema operativo que requiere instalarse, pero te da tiempo para posponerla por una semana.",
+                    "texto_izquierda": "Posponer la actualización hasta el próximo mes para no interrumpir el trabajo",
+                    "texto_derecha": "Instalar la actualización inmediatamente durante un horario de baja actividad",
+                    "correcto": 1.0,
+                    "explicacion": "Las actualizaciones contienen parches críticos que cierran vulnerabilidades explotadas por el malware. Posponerlas deja a la PYME vulnerable a ataques conocidos y posibles pérdidas financieras.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": -10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Un colega de otra sucursal te pide acceso remoto a tu computador por Teams para instalar un 'software de control' urgente.",
+                    "texto_izquierda": "Permitir el acceso remoto porque es un colega",
+                    "texto_derecha": "Rechazar la solicitud y reportar inmediatamente al área de TI",
+                    "correcto": 1.0,
+                    "explicacion": "El acceso remoto no solicitado es una táctica clásica de ingeniería social (Pretexting). Permitir el acceso puede permitir que un atacante instale software espía o tome control total de los sistemas de la PYME.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -50,
+                        "integridad": -30,
+                        "disponibilidad": -20
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "titulo": "Protección y Clasificación de Datos Corporativos",
+            "subtitulo": "Aprende a identificar la sensibilidad de la información para protegerla según las políticas de la empresa.",
+            "mini_descripcion": "Clasifica correctamente los datos (público, interno, confidencial) antes de compartirlos o almacenarlos en diferentes entornos.",
+            "contenido_estudio": "[b]1. Clasificación de Datos Corporativos[/b]\nLa información debe clasificarse según su impacto si se divulga: [b]Pública[/b], [b]Interna[/b] (uso interno, no para terceros), y [b]Confidencial[/b] (datos financieros, estrategias de clientes, propiedad intelectual). La información [b]Confidencial[/b] requiere las protecciones más estrictas.\n\n[b]2. El Riesgo de la Divulgación[/b]\nLa divulgación accidental de datos confidenciales puede llevar a sanciones legales graves para la PYME en Chile (Ley 21.719) y daño irreparable a la reputación comercial, además de multas administrativas.\n\n[b]3. Almacenamiento Seguro por Entorno[/b]\nLos datos [b]Confidenciales[/b] deben almacenarse únicamente en sistemas autorizados (ej: Google Drive corporativo, OneDrive), nunca en dispositivos personales o servicios no aprobados. Esto asegura que las políticas de seguridad y respaldo se apliquen automáticamente.\n\n[b]4. Control de Acceso Basado en Necesidad[/b]\nSolo debes acceder a la información que necesitas estrictamente para realizar tu trabajo (Principio de Mínimo Privilegio). Evita almacenar datos sensibles en ubicaciones accesibles por cualquier colega.\n\n[b]5. Flujo Seguro de Información[/b]\nSiempre utiliza los canales oficiales y seguros definidos por la empresa para el intercambio de información sensible, evitando métodos informales como WhatsApp o correos personales para documentos críticos.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo de un colega pidiéndote que le envíes la lista completa de precios de los nuevos proveedores a un contacto externo para cerrar un trato rápidamente.",
+                    "texto_izquierda": "Enviar la lista completa de precios por correo",
+                    "texto_derecha": "Enviar solo el resumen de precios y pedirle al colega que lo valide por Teams",
+                    "correcto": 1.0,
+                    "explicacion": "Compartir información financiera detallada sin validación formal expone a la PYME a riesgos de competencia desleal y posibles incumplimientos en la gestión de contratos. La opción correcta es usar canales seguros y validar con el colega antes de divulgar.",
+                    "efecto_izquierda": {
+                        "presupuesto": -30,
+                        "confidencialidad": -45,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu jefe te pide que guardes un documento estratégico de la nueva línea de productos en tu carpeta personal de OneDrive para tenerlo a mano durante el viaje.",
+                    "texto_izquierda": "Guardar el archivo en tu disco duro personal",
+                    "texto_derecha": "Subir el archivo al repositorio seguro de la empresa en OneDrive",
+                    "correcto": 1.0,
+                    "explicacion": "Almacenar información confidencial en dispositivos personales rompe las políticas de seguridad corporativa y elimina los controles de acceso de la empresa, exponiendo a la PYME a riesgos de pérdida o robo.",
+                    "efecto_izquierda": {
+                        "presupuesto": -15,
+                        "confidencialidad": -40,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Estás en una cafetería y un cliente te pide que le muestres la planilla de cálculo con los costos internos para cerrar un trato.",
+                    "texto_izquierda": "Mostrar la planilla directamente al cliente",
+                    "texto_derecha": "Mostrar solo el resumen de costos y pedirle que se reúna en la oficina para revisar los detalles",
+                    "correcto": 1.0,
+                    "explicacion": "Revelar datos internos sin control es una violación directa del principio de confidencialidad. La opción correcta es mantener la información sensible oculta y solicitar una reunión formal para discutir los términos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -25,
+                        "confidencialidad": -40,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un colega te pide que le envíes un documento de planificación importante por WhatsApp para agilizar el trabajo, ya que es más rápido.",
+                    "texto_izquierda": "Enviar el documento completo por WhatsApp",
+                    "texto_derecha": "Compartir el enlace seguro del documento desde Google Drive corporativo",
+                    "correcto": 1.0,
+                    "explicacion": "El uso de canales no seguros como WhatsApp para documentos confidenciales expone la información a riesgos de interceptación y pérdida. Siempre se deben usar los enlaces oficiales de la empresa para mantener la integridad de los datos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Al revisar un informe de ventas que contiene datos sensibles, te das cuenta de que el archivo fue guardado en una carpeta compartida con un colega que no tiene acceso a esa información.",
+                    "texto_izquierda": "Asumir que es solo un error de la carpeta",
+                    "texto_derecha": "Reportar inmediatamente al área de TI o al jefe para verificar los permisos de acceso",
+                    "correcto": 1.0,
+                    "explicacion": "Ignorar el error permite que la información sensible permanezca expuesta a personas no autorizadas. Reportar asegura que se apliquen las políticas de control de acceso y se mitiga el riesgo de fuga de datos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "titulo": "Amenazas Combinadas y Cultura de Ciberseguridad",
+            "subtitulo": "Reconoce cómo los ataques combinados explotan la confianza y forma una cultura de reporte proactiva.",
+            "mini_descripcion": "Entender que las amenazas se combinan para explotar debilidades humanas y aplicar el protocolo de reporte interno ante eventos sospechosos.",
+            "contenido_estudio": "[b]1. El Ciclo del Ataque Combinado[/b]\nLas amenazas modernas no son ataques aislados, sino cadenas donde un error (ej: un correo dudoso) se combina con una debilidad humana (ej: prisa o confianza) y un vector técnico (ej: un enlace malicioso) para lograr el objetivo.\n\n[b]2. Ingeniería Social como Punto de Entrada[/b]\nLa ingeniería social (como el pretexting o el baiting) es la técnica que explota la psicología humana. El atacante no ataca el software, sino a la persona, buscando crear urgencia, miedo o simpatía para obtener información o acciones.\n\n[b]3. La Cultura de Reporte como Defensa[/b]\nLa mejor defensa contra ataques combinados es la cultura de reporte. Si sospechas algo (un correo raro, un pedido extraño), reportarlo inmediatamente al equipo de TI o a tu jefe no es una molestia; es una acción crítica que detiene el ataque antes de que cause daño masivo.\n\n[b]4. El Impacto en la PYME[/b]\nUn incidente no solo afecta al computador, sino a la operación del negocio. Un ataque exitoso puede paralizar las ventas, generar multas por incumplimiento de la Ley 21.719 o destruir la reputación con clientes y proveedores.\n\n[b]5. La Responsabilidad Compartida[/b]\nLa ciberseguridad no es solo trabajo del equipo de TI. Cada trabajador es el primer y más importante filtro. Una cultura donde todos se sienten responsables de reportar riesgos reduce drásticamente el riesgo organizacional.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un mensaje por WhatsApp de un supuesto colega que dice estar en una reunión urgente y te pide compartir la clave de acceso a un documento del Drive para 'agilizar' el trabajo.",
+                    "texto_izquierda": "Compartir inmediatamente el enlace para no retrasar al compañero",
+                    "texto_derecha": "Llamar directamente al colega por Teams para confirmar la solicitud",
+                    "correcto": 1.0,
+                    "explicacion": "La urgencia es un disparador de ingeniería social (presión temporal). Compartir el enlace sin verificar rompe el protocolo de seguridad y permite que el atacante acceda a información sensible, poniendo en riesgo la confidencialidad de los datos corporativos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -30,
+                        "confidencialidad": -45,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un proveedor externo te envía un correo que parece legítimo pidiendo actualizar la cuenta bancaria para el pago de una factura urgente, y te presiona para hacer el cambio ahora.",
+                    "texto_izquierda": "Realizar la transferencia inmediatamente para evitar retrasos en el pago",
+                    "texto_derecha": "Suspender la acción y llamar al proveedor por un número conocido para validar el cambio",
+                    "correcto": 1.0,
+                    "explicacion": "El cambio de cuenta es una táctica común de suplantación de identidad (Pretexting). La validación telefónica evita que se caiga en estafas de cambio de cuenta y protege la integridad financiera de la PYME contra fraudes externos.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -30,
+                        "integridad": -20,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Descargas un archivo de una fuente desconocida en un pendrive promocional que te dieron en una feria y el sistema te pide ejecutarlo para instalar una 'herramienta' gratuita.",
+                    "texto_izquierda": "Ejecutar el archivo porque es una herramienta gratis",
+                    "texto_derecha": "Rechazar la instalación y reportar el pendrive a TI inmediatamente",
+                    "correcto": 1.0,
+                    "explicacion": "Los dispositivos externos no verificados son un vector de ataque (Baiting). Ejecutar archivos desconocidos es una forma directa de introducir malware que puede comprometer toda la red corporativa y causar parálisis operativa.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -40,
+                        "integridad": -30,
+                        "disponibilidad": -20
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Detectas que un colega está accediendo a archivos de clientes que no le corresponden en Google Drive y te sientes incómodo al reportarlo.",
+                    "texto_izquierda": "Ignorar la situación por miedo a generar conflicto con el compañero",
+                    "texto_derecha": "Reportar inmediatamente la actividad sospechosa al equipo de TI o a tu jefe directo",
+                    "correcto": 1.0,
+                    "explicacion": "La cultura de reporte es vital. Ignorar una anomalía permite que un compromiso se extienda sin control. Reportar asegura que el incidente sea tratado por los expertos y minimiza el daño potencial a la reputación y a la información sensible de la empresa.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -50,
+                        "integridad": -30,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "El equipo de TI te informa que se detectó un intento de acceso no autorizado a la base de datos de clientes, pero te pide que no te preocupes y que sigas trabajando normalmente.",
+                    "texto_izquierda": "Aceptar la información y seguir con tus tareas diarias",
+                    "texto_derecha": "Detener inmediatamente tu trabajo y notificar al equipo de TI sobre el incidente",
+                    "correcto": 1.0,
+                    "explicacion": "La falta de reporte permite que un incidente se convierta en una brecha mayor (escalada). La cultura de seguridad exige que cualquier alerta de seguridad sea tratada como una emergencia para proteger la integridad y disponibilidad de los datos del negocio.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -40,
+                        "integridad": -30,
+                        "disponibilidad": -20
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

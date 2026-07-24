@@ -1,0 +1,110 @@
+{
+    "id": 3,
+    "titulo": "Protección del Entorno de Trabajo y Dispositivos",
+    "subtitulo": "Asegura tus dispositivos y el espacio físico para prevenir accesos no autorizados y riesgos físicos.",
+    "mini_descripcion": "Aprende a aplicar las salvaguardas básicas para proteger tu equipo, redes y la información sensible en cualquier entorno laboral.",
+    "contenido_estudio": "[b]1. Inventario de Activos Físicos[/b]\nDebes saber exactamente qué dispositivos corporativos tienes (laptops, celulares) y dónde están ubicados. Esto es el primer paso para controlar quién tiene acceso a la información.\n\n[b]2. Control de Dispositivos Externos (USB)[/b]\nNunca conectes memorias USB desconocidas o no autorizadas a tu equipo corporativo. Estos dispositivos pueden introducir malware directamente en la red interna de la PYME.\n\n[b]3. Seguridad de Red y Wi-Fi Pública[/b]\nEvita realizar operaciones sensibles (acceso a sistemas, manejo de datos financieros) cuando estés conectado a redes Wi-Fi públicas. Si debes hacerlo, utiliza siempre una VPN corporativa.\n\n[b]4. Gestión de Actualizaciones (Parches)[/b]\nLas actualizaciones del sistema operativo y las aplicaciones no son solo mejoras; corrigen fallas de seguridad conocidas que los atacantes explotan constantemente. Ignorar parches deja puertas abiertas al malware.\n\n[b]5. Bloqueo Físico y Entorno (Tailgating)[/b]\nSé consciente de tu entorno físico. Evita dejar pantallas abiertas o documentos sensibles visibles, especialmente en áreas compartidas como cafeterías o recepción, para prevenir el 'Shoulder Surfing' o el 'Tailgating'.",
+    "estado": "Disponible",
+    "cartas": [
+        {
+            "imagen": 0,
+            "contexto": "Estás conectando un pendrive promocional que te dieron en una feria a tu computador de la oficina y quieres copiar unos archivos rápidamente.",
+            "texto_izquierda": "Conectar el pendrive inmediatamente para no perder tiempo",
+            "texto_derecha": "Consultar al área de TI antes de conectar cualquier dispositivo externo",
+            "correcto": 1.0,
+            "explicacion": "Conectar dispositivos desconocidos es una vía directa para introducir malware o spyware en la red corporativa. El pendrive puede contener código malicioso que compromete toda la infraestructura de la PYME.",
+            "efecto_izquierda": {
+                "presupuesto": -30,
+                "confidencialidad": -45,
+                "integridad": -20,
+                "disponibilidad": 10
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 1,
+            "contexto": "Estás trabajando en una cafetería durante una reunión de negocios y te levantas 2 minutos a retirar un café al mostrador.",
+            "texto_izquierda": "Dejar la laptop abierta ya que vuelves de inmediato",
+            "texto_derecha": "Bloquear la pantalla con el atajo Win + L antes de ponerte de pie",
+            "correcto": 1.0,
+            "explicacion": "Dejar la sesión abierta expone tus sistemas al 'Shoulder Surfing'. Al bloquear la pantalla, evitas que cualquier persona observe o acceda físicamente a tus datos sensibles mientras te ausentas.",
+            "efecto_izquierda": {
+                "presupuesto": -10,
+                "confidencialidad": -30,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 15,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 5,
+            "contexto": "Estás conectado a una red Wi-Fi pública en un aeropuerto y necesitas revisar unos documentos de la empresa para agilizar el trámite.",
+            "texto_izquierda": "Abrir el documento directamente para ahorrar tiempo",
+            "texto_derecha": "Activar la VPN corporativa antes de acceder a cualquier recurso interno",
+            "correcto": 1.0,
+            "explicacion": "Acceder a sistemas sensibles sin una VPN expone toda la información a posibles ataques de interceptación en la red pública. La VPN actúa como un túnel seguro para proteger los datos de la PYME.",
+            "efecto_izquierda": {
+                "presupuesto": -15,
+                "confidencialidad": -40,
+                "integridad": -20,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 3,
+            "contexto": "Tu equipo corporativo tiene una notificación de actualización crítica del sistema operativo que requiere instalarse, pero te da tiempo para posponerla por una semana.",
+            "texto_izquierda": "Posponer la actualización hasta el próximo mes para no interrumpir el trabajo",
+            "texto_derecha": "Instalar la actualización inmediatamente durante un horario de baja actividad",
+            "correcto": 1.0,
+            "explicacion": "Las actualizaciones contienen parches críticos que cierran vulnerabilidades explotadas por el malware. Posponerlas deja a la PYME vulnerable a ataques conocidos y posibles pérdidas financieras.",
+            "efecto_izquierda": {
+                "presupuesto": 50,
+                "confidencialidad": -30,
+                "integridad": -20,
+                "disponibilidad": -10
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 4,
+            "contexto": "Un colega de otra sucursal te pide acceso remoto a tu computador por Teams para instalar un 'software de control' urgente.",
+            "texto_izquierda": "Permitir el acceso remoto porque es un colega",
+            "texto_derecha": "Rechazar la solicitud y reportar inmediatamente al área de TI",
+            "correcto": 1.0,
+            "explicacion": "El acceso remoto no solicitado es una táctica clásica de ingeniería social (Pretexting). Permitir el acceso puede permitir que un atacante instale software espía o tome control total de los sistemas de la PYME.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -50,
+                "integridad": -30,
+                "disponibilidad": -20
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        }
+    ]
+}

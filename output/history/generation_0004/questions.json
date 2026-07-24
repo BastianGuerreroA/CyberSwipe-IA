@@ -1,0 +1,54 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "OWASP SQL Injection: Inyecciones de SQL",
+            "subtitulo": "Entiende cómo los atacantes manipulan consultas de bases de datos mediante la inyección de código malicioso.",
+            "mini_descripcion": "Esta cápsula introduce los riesgos asociados a las inyecciones SQL, enseñando por qué es crucial validar y sanitizar todas las entradas del usuario en aplicaciones web.",
+            "contenido_estudio": "Las inyecciones SQL son una de las vulnerabilidades más críticas clasificadas en el OWASP Top 10 (A03: Inyección).\n\n[b]Conceptos Clave:[/b]\n* [b]Inyección SQL[/b]: Es la técnica de introducir comandos SQL maliciosos a través de campos de entrada del usuario para manipular la base de datos.\n* [b]Vulnerabilidad[/b]: Ocurre cuando el código de la aplicación construye consultas SQL concatenando directamente entradas no validadas.\n* [b]Prevención (Prepared Statements)[/b]: La defensa principal es utilizar sentencias preparadas (Prepared Statements) o consultas parametrizadas, que separan la lógica del comando SQL de los datos proporcionados por el usuario.\n\n[b]Ejemplo Conceptual:[/b]\nSi un atacante introduce `' OR 1=1 --` en un campo de inicio de sesión, el sistema ejecuta una consulta que siempre es verdadera, permitiendo el acceso sin credenciales válidas.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Estás desarrollando una funcionalidad para buscar productos en la base de datos. El código actual construye la consulta concatenando directamente la entrada del usuario.",
+                    "texto_izquierda": "Usar concatenación directa",
+                    "texto_derecha": "Usar sentencias preparadas (Prepared Statements)",
+                    "correcto": 1.0,
+                    "explicacion": "La opción correcta es usar sentencias preparadas. La concatenación directa permite que el atacante inyecte comandos SQL maliciosos, violando la integridad de los datos y permitiendo la exfiltración o modificación de información.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -20,
+                        "integridad": -30,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 5,
+                        "confidencialidad": 15,
+                        "integridad": 20,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un atacante introduce una cadena maliciosa en el campo de búsqueda para obtener todos los registros de usuarios del sistema.",
+                    "texto_izquierda": "La aplicación falla la consulta",
+                    "texto_derecha": "El ataque es exitoso (SQLi)",
+                    "correcto": 1.0,
+                    "explicacion": "Si no se implementan mecanismos de filtrado adecuados, el atacante puede manipular la lógica de la base de datos. La inyección SQL es una violación directa del principio de integridad de los datos.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -15,
+                        "integridad": -25,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": -10,
+                        "confidencialidad": 10,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "capsulas": [
+    {
+      "id": 1,
+      "titulo": "OWASP SQL Injection: Inyecciones SQL",
+      "subtitulo": "Entiende cómo las inyecciones SQL comprometen la integridad de tus bases de datos.",
+      "mini_descripcion": "Esta cápsula introduce los fundamentos de las vulnerabilidades de Inyección SQL según el OWASP Top 10 y su impacto en sistemas de gestión de bases de datos.",
+      "contenido_estudio": "Las inyecciones SQL son una clase de vulnerabilidad que ocurre cuando un atacante puede introducir comandos SQL maliciosos a través de entradas de datos no validadas proporcionadas por el usuario.\n\n[b]Conceptos Clave:[/b]\n* [b]Inyección SQL (SQLi)[/b]: Es la técnica de manipular consultas SQL para obtener, modificar o eliminar datos de una base de datos.\n* [b]Vector de Ataque[/b]: Las entradas del usuario (formularios de búsqueda, campos de login) son los vectores primarios donde se introduce el código malicioso.\n* [b]Prevención Clave: Consultas Parametrizadas[/b]: Es la defensa más efectiva. Consiste en separar la lógica de la consulta de los datos proporcionados por el usuario, asegurando que la entrada siempre sea tratada como dato y nunca como código ejecutable.\n\n[b]Impacto del OWASP:[/b]\nLas inyecciones SQL pueden llevar a la exfiltración de información sensible (confidencialidad), modificación de registros críticos (integridad) o denegación de servicio (disponibilidad) en el sistema de gestión de bases de datos.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Estás desarrollando una página web que permite a los usuarios buscar productos. El atacante introduce un comando SQL malicioso en el campo de búsqueda para ver todos los registros de empleados.",
+          "texto_izquierda": "Usar concatenación directa",
+          "texto_derecha": "Usar consultas parametrizadas",
+          "correcto": 1.0,
+          "explicacion": "La opción correcta es usar consultas parametrizadas. Esto separa la consulta SQL de los datos de entrada, previniendo que el código malicioso se ejecute como una instrucción válida. La concatenación directa permite la inyección de comandos.",
+          "efecto_izquierda": { "presupuesto": 0, "confidencialidad": -25, "integridad": -10, "disponibilidad": 0 },
+          "efecto_derecha": { "presupuesto": 0, "confidencialidad": 0, "integridad": 0, "disponibilidad": 0 }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Un desarrollador implementa una función de búsqueda utilizando la concatenación de cadenas para construir la consulta SQL. El atacante logra extraer información sensible de la base de datos.",
+          "texto_izquierda": "El código es vulnerable",
+          "texto_derecha": "La aplicación está segura",
+          "correcto": 1.0,
+          "explicacion": "Si se utiliza concatenación directa para construir consultas SQL, el sistema es inherentemente vulnerable a inyecciones SQL. La seguridad reside en la correcta implementación de mecanismos de validación y sanitización de entradas.",
+          "efecto_izquierda": { "presupuesto": -15, "confidencialidad": -30, "integridad": 0, "disponibilidad": 0 },
+          "efecto_derecha": { "presupuesto": 0, "confidencialidad": 0, "integridad": 0, "disponibilidad": 0 }
+        }
+      ]
+    }
+  ]
+}

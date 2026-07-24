@@ -1,0 +1,174 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Higiene de Contraseñas y Bloqueo",
+            "subtitulo": "Protege tus dispositivos y accesos con PIN, biometría y claves fuertes.",
+            "mini_descripcion": "Aprende las claves fundamentales para evitar intrusos en tus dispositivos físicos y proteger tus accesos corporativos.",
+            "contenido_estudio": "[b]Conceptos Clave:[/b]\n* [b]PIN de 6 dígitos[/b]: Mucho más seguro que uno de 4 dígitos (1 millón vs 10 mil combinaciones posibles).\n* [b]Autenticación Multifactor (MFA)[/b]: Añade una segunda capa de seguridad (como un código enviado a tu celular) además de tu contraseña.\n* [b]Principio de Privacidad[/b]: Nunca dejes sesiones administrativas o financieras abiertas si te ausentas de tu puesto de trabajo.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo que parece ser de la jefatura pidiéndote urgentemente que hagas una transferencia a una cuenta nueva para cerrar un negocio antes del mediodía.",
+                    "texto_izquierda": "Hacer la transferencia",
+                    "texto_derecha": "Llamar y validar la solicitud",
+                    "correcto": 1.0,
+                    "explicacion": "Nunca realices transferencias urgentes basadas solo en un correo electrónico. El atacante puede suplantar a tu jefe (CAPEC-403). Siempre valida por un canal seguro, como una llamada telefónica directa o un mensaje interno verificado.",
+                    "efecto_izquierda": {
+                        "presupuesto": 25,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un colega te pide que le facilites tu contraseña de correo para 'resolver un problema técnico' rápido y evitarte una llamada molesta.",
+                    "texto_izquierda": "Dar la contraseña",
+                    "texto_derecha": "Negarse a compartirla",
+                    "correcto": 1.0,
+                    "explicacion": "Compartir contraseñas es una violación grave de la política corporativa y expone toda la información de la empresa. La seguridad se basa en que solo tú tienes el control de tus credenciales.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Te encuentras en la cafetería y un desconocido te ofrece una memoria USB con el título 'Planillas de Sueldos 2024' diciendo que es para una auditoría.",
+                    "texto_izquierda": "Conectar la memoria",
+                    "texto_derecha": "Rechazar la oferta",
+                    "correcto": 1.0,
+                    "explicacion": "Nunca conectes dispositivos USB desconocidos a tu computador de trabajo. Esto es un método común de ataque (Baiting/CAPEC-294) para instalar malware que roba información sensible.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu computador se queda inactivo por una hora. El sistema te pide iniciar sesión de nuevo para desbloquearlo.",
+                    "texto_izquierda": "Dejar la pantalla abierta",
+                    "texto_derecha": "Bloquear la pantalla inmediatamente",
+                    "correcto": 1.0,
+                    "explicacion": "El bloqueo automático es una medida esencial (CIS 5.5). Si te ausentas aunque sea por un minuto, el atacante tiene tiempo de acceder a tus datos.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -20,
+                        "integridad": 0,
+                        "disponibilidad": 10
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Te piden que uses la misma contraseña para tu cuenta de correo y la del sistema de facturación corporativo por ser 'el mismo equipo'.",
+                    "texto_izquierda": "Usar la misma clave",
+                    "texto_derecha": "Crear contraseñas únicas",
+                    "correcto": 1.0,
+                    "explicacion": "La reutilización de contraseñas es el error más común y permite que si una cuenta es comprometida, todas las demás también lo sean. Debes usar gestores para claves fuertes.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un colega te pide que le facilites el acceso a la VPN de la oficina para 'reparar' un problema de conexión.",
+                    "texto_izquierda": "Dar el acceso VPN",
+                    "texto_derecha": "Rechazar el acceso",
+                    "correcto": 1.0,
+                    "explicacion": "El acceso a la VPN es una puerta de entrada a toda la red corporativa. Nunca facilites accesos remotos sin un protocolo de seguridad claro y validado por TI.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Recibes un correo con un enlace que parece ser de tu banco pidiéndote actualizar tus datos inmediatamente bajo amenaza de cierre de cuenta.",
+                    "texto_izquierda": "Hacer clic y actualizar",
+                    "texto_derecha": "Ignorar el correo y llamar al banco",
+                    "correcto": 1.0,
+                    "explicacion": "Los bancos nunca te pedirán datos sensibles por un enlace en un correo. Esto es un clásico de Phishing (CAPEC-98). Siempre verifica la URL directamente o llama a los números oficiales.",
+                    "efecto_izquierda": {
+                        "presupuesto": 50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu sistema de antivirus te notifica que hay una actualización pendiente. La instalas inmediatamente para liberar tiempo.",
+                    "texto_izquierda": "Instalar la actualización",
+                    "texto_derecha": "Esperar al horario de mantenimiento",
+                    "correcto": 1.0,
+                    "explicacion": "Las actualizaciones de seguridad son críticas y deben aplicarse cuanto antes (CIS 12.1). Esperar solo te expone a vulnerabilidades conocidas que los atacantes ya están explotando.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 5,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

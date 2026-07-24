@@ -1,0 +1,40 @@
+# ==========================================
+# CyberSwipe-AI .gitignore
+# ==========================================
+
+# Entorno de ejecución y variables secretas
+.env
+.env.local
+
+# Claves de cifrado y secretos AES
+.key/
+*.key
+secret.key
+
+# Python / Pycache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+.pytest_cache/
+
+# Archivos de logs y temporales
+logs/*.log
+*.log
+scratch/
+
+# Archivos de entorno Antigravity / IDEs
+.gemini/
+.agents/
+.vscode/
+.idea/
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+desktop.ini

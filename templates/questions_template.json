@@ -1,0 +1,60 @@
+{
+  "id": 1,
+  "titulo": "Gestión Segura de Credenciales y MFA",
+  "subtitulo": "Aprende a proteger tus accesos corporativos con passphrases, gestores y MFA en entornos diversos.",
+  "mini_descripcion": "Aplica procedimientos seguros para la creación, almacenamiento y uso de contraseñas y autenticación multifactor.",
+  "contenido_estudio": "[b]1. Passphrases de Alta Longitud[/b]\nCombina 4 o más palabras aleatorias separadas para formar frases largas (+14 caracteres), fáciles de recordar pero imposibles de descifrar por fuerza bruta.\n\n[b]2. Gestores de Contraseñas Autorizados[/b]\nUtiliza la bóveda digital de la empresa para almacenar y generar claves complejas. Nunca guardes contraseñas en archivos de texto, navegadores sin clave o notas impresas.\n\n[b]3. Aislamiento estricto Laboral vs Personal[/b]\nNunca utilices la misma contraseña corporativa para tus redes sociales o cuentas personales. Si un servicio externo sufre una fuga, comprometerá los accesos de la empresa.\n\n[b]4. Autenticación Multifactor (MFA) mediante App[/b]\nPrioriza aplicaciones autenticadoras (Google/Microsoft Authenticator) frente a códigos SMS, ya que los SMS pueden ser interceptados mediante duplicación de SIM (SIM swapping).\n\n[b]5. Bloqueo Manual de Sesión (Win + L)[/b]\nAl levantarte de tu escritorio en teletrabajo o en la oficina, presiona [b]Win + L[/b] para impedir que visitantes o terceros observen o utilicen tus sesiones abiertas.",
+  "estado": "Disponible",
+  "cartas": [
+    {
+      "imagen": 0,
+      "contexto": "Estás creando la clave para el nuevo sistema de facturación en la oficina y necesitas una contraseña fácil de recordar sin anotarla.",
+      "texto_izquierda": "Usar una frase larga de 4 palabras como 'gato.sol.cafe.verde'",
+      "texto_derecha": "Usar tu rut y el nombre de la empresa con un signo al final",
+      "correcto": -1.0,
+      "explicacion": "Una passphrase larga de 4 palabras aleatorias supera los 16 caracteres y es matemáticamente mucho más segura contra ataques de fuerza bruta que usar datos predecibles de la empresa.",
+      "efecto_izquierda": { "presupuesto": 0, "confidencialidad": 20, "integridad": 10, "disponibilidad": 0 },
+      "efecto_derecha": { "presupuesto": -10, "confidencialidad": -30, "integridad": -10, "disponibilidad": 0 }
+    },
+    {
+      "imagen": 1,
+      "contexto": "En tu jornada de teletrabajo, tienes que manejar 8 accesos a portales de proveedores distintos y te cuesta memorizarlos todos.",
+      "texto_izquierda": "Guardar las claves en una hoja de cálculo protegida en tu escritorio",
+      "texto_derecha": "Guardar las claves en la aplicación del gestor de contraseñas corporativo",
+      "correcto": 1.0,
+      "explicacion": "El gestor de contraseñas corporativo cifra la bóveda de claves bajo un único acceso protegido. Dejar planillas en el escritorio expone las claves a malware o sincronizaciones no deseadas.",
+      "efecto_izquierda": { "presupuesto": 0, "confidencialidad": -25, "integridad": -15, "disponibilidad": 0 },
+      "efecto_derecha": { "presupuesto": 0, "confidencialidad": 25, "integridad": 10, "disponibilidad": 0 }
+    },
+    {
+      "imagen": 0,
+      "contexto": "Estás registrándote en un sitio de compras personales y el sistema pide crear una clave. Tienes la tentación de usar la misma contraseña de tu correo corporativo.",
+      "texto_izquierda": "Usar la misma clave corporativa para no olvidarla",
+      "texto_derecha": "Generar una contraseña única mediante el gestor para esa tienda",
+      "correcto": 1.0,
+      "explicacion": "Reutilizar la clave corporativa en tiendas externas expone a la empresa: si la tienda sufre una filtración de datos, los atacantes probarán esa clave en los sistemas del negocio.",
+      "efecto_izquierda": { "presupuesto": -20, "confidencialidad": -40, "integridad": -20, "disponibilidad": 0 },
+      "efecto_derecha": { "presupuesto": 0, "confidencialidad": 20, "integridad": 0, "disponibilidad": 0 }
+    },
+    {
+      "imagen": 1,
+      "contexto": "Al configurar el doble factor de acceso a la plataforma bancaria de la PYME, la plataforma te da a elegir entre recibir SMS o usar una App Autenticadora.",
+      "texto_izquierda": "Elegir la verificación por App Autenticadora móvil",
+      "texto_derecha": "Elegir mensajes de texto SMS por ser más familiar",
+      "correcto": -1.0,
+      "explicacion": "Las aplicaciones autenticadoras generan códigos locales seguros en el dispositivo. Los SMS son vulnerables a la clonación de tarjeta SIM (SIM swapping) por parte de delincuentes.",
+      "efecto_izquierda": { "presupuesto": 0, "confidencialidad": 25, "integridad": 15, "disponibilidad": 0 },
+      "efecto_derecha": { "presupuesto": -15, "confidencialidad": -20, "integridad": 0, "disponibilidad": 0 }
+    },
+    {
+      "imagen": 0,
+      "contexto": "Estás trabajando en una cafetería durante una reunión de negocios y te levantas 2 minutos a retirar un café al mostrador.",
+      "texto_izquierda": "Dejar la laptop abierta ya que vuelves de inmediato",
+      "texto_derecha": "Bloquear la pantalla con el atajo Win + L antes de ponerte de pie",
+      "correcto": 1.0,
+      "explicacion": "Bloquear la sesión con Win + L evita que cualquier persona cercana observe la pantalla (Shoulder Surfing) o acceda físicamente a tus sistemas corporativos abiertos.",
+      "efecto_izquierda": { "presupuesto": -10, "confidencialidad": -30, "integridad": -10, "disponibilidad": 0 },
+      "efecto_derecha": { "presupuesto": 0, "confidencialidad": 15, "integridad": 0, "disponibilidad": 0 }
+    }
+  ]
+}

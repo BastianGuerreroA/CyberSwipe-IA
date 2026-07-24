@@ -1,0 +1,54 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Ingeniería Social: El Ataque del Soporte Técnico Impostor",
+            "subtitulo": "Aprende a identificar y rechazar solicitudes de acceso remoto o credenciales bajo la excusa de una emergencia técnica.",
+            "mini_descripcion": "Descubre cómo los atacantes utilizan pretextos falsos para engañar a los empleados y obtener acceso a sistemas corporativos.",
+            "contenido_estudio": "El Pretexting (Creación de un Escenario Falso) es la base de muchos ataques. Los atacantes se hacen pasar por entidades legítimas (Soporte TI, proveedores, ejecutivos) para manipularte psicológicamente y obtener información sensible.\n\n[b]Técnicas Clave:[/b]\n* [b]Urgencia[/b]: Crean una presión temporal extrema para evitar que pienses.\n* [b]Autoridad[/b]: Se hacen pasar por personas con poder (jefes, entidades gubernamentales).\n* [b]Confianza[/b]: Buscan establecer una relación de ayuda o compañerismo antes de pedir la información.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Un supuesto técnico llama diciendo que hay una caída crítica del servidor y necesita tu contraseña para aplicar un parche urgente inmediatamente.",
+                    "texto_izquierda": "Proporcionar la contraseña",
+                    "texto_derecha": "Descolgar y verificar por teléfono con el equipo de TI oficial",
+                    "correcto": 1.0,
+                    "explicacion": "Nunca se debe compartir contraseñas bajo presión. El soporte técnico legítimo nunca te pedirá tu clave para resolver problemas urgentes; siempre deben seguir los protocolos internos de verificación.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 0,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Un proveedor llama diciendo que hay un cambio en la cuenta bancaria corporativa y necesita que hagas una transferencia inmediata para evitar el cierre de la cuenta.",
+                    "texto_izquierda": "Realizar la transferencia inmediatamente",
+                    "texto_derecha": "Suspender la comunicación y contactar al área financiera por un canal verificado",
+                    "correcto": 1.0,
+                    "explicacion": "Las solicitudes financieras urgentes deben ser verificadas a través de canales seguros (ej: correo oficial o llamadas a números conocidos). Las amenazas de cierre son una táctica común para forzar acciones rápidas.",
+                    "efecto_izquierda": {
+                        "presupuesto": -10,
+                        "confidencialidad": -25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 0,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "capsulas": [
+    {
+      "id": 1,
+      "titulo": "OWASP Top 10: Inyecciones SQL",
+      "subtitulo": "Entiende cómo las inyecciones SQL comprometen la integridad de tus bases de datos.",
+      "mini_descripcion": "Esta cápsula te enseñará los riesgos asociados a las inyecciones SQL, una de las vulnerabilidades más críticas del OWASP Top 10, y cómo prevenirlas en aplicaciones web.",
+      "contenido_estudio": "Las Inyecciones SQL son un tipo de ataque donde un atacante introduce comandos maliciosos en una consulta SQL enviada por una aplicación a su base de datos. Esto permite al atacante manipular la lógica de la base de datos, pudiendo leer, modificar o incluso eliminar información sensible.\n\n[b]Conceptos Clave:[/b]\n* [b]SQL Injection (SQLi)[/b]: Es la técnica principal donde se insertan comandos SQL maliciosos a través de entradas del usuario.\n* [b]Inyección de Datos[/b]: El atacante manipula la consulta para obtener datos no autorizados o ejecutar comandos.\n* [b]Prevención mediante Parámetros[/b]: La defensa más efectiva es tratar toda entrada del usuario como datos, nunca como código ejecutable. Esto se logra utilizando consultas preparadas (Prepared Statements) en lugar de concatenar cadenas de texto directamente.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Estás desarrollando una funcionalidad para buscar productos en la base de datos. El código actual construye la consulta concatenando directamente la entrada del usuario (ID) con la cadena SQL.",
+          "texto_izquierda": "Usar concatenación directa",
+          "texto_derecha": "Usar consultas preparadas (Prepared Statements)",
+          "correcto": 1.0,
+          "explicacion": "La opción correcta es usar consultas preparadas. La concatenación directa permite que el atacante inyecte comandos SQL maliciosos en la consulta, lo que lleva a una Inyección SQL (A03). Las consultas preparadas separan la lógica del código de los datos, asegurando que la entrada del usuario se trate siempre como datos y no como comandos ejecutables.",
+          "efecto_izquierda": { "presupuesto": -15, "confidencialidad": -20, "integridad": -30, "disponibilidad": 0 },
+          "efecto_derecha": { "presupuesto": 5, "confidencialidad": 10, "integridad": 0, "disponibilidad": 0 }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Un atacante introduce la cadena: `' OR '1'='1` en el campo de búsqueda de un formulario web para intentar acceder a todos los registros de clientes.",
+          "texto_izquierda": "El sistema filtra correctamente",
+          "texto_derecha": "La consulta se ejecuta como se espera",
+          "correcto": 1.0,
+          "explicacion": "Si el sistema filtra correctamente, significa que la entrada del usuario fue tratada como un valor literal y no como parte de la estructura SQL. Si la inyección ocurre, el atacante puede manipular la lógica de la consulta para saltarse las restricciones de acceso y acceder a datos sensibles (violación de integridad).",
+          "efecto_izquierda": { "presupuesto": 0, "confidencialidad": -10, "integridad": -25, "disponibilidad": 0 },
+          "efecto_derecha": { "presupuesto": 0, "confidencialidad": 10, "integridad": 0, "disponibilidad": 0 }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "capsulas": [
+    {
+      "id": 1,
+      "titulo": "Higiene de Contraseñas y Bloqueo",
+      "subtitulo": "Protege tus dispositivos y accesos con PIN, biometría y claves fuertes.",
+      "mini_descripcion": "Aprende las claves fundamentales para evitar intrusos en tus dispositivos físicos y proteger tus accesos corporativos.",
+      "contenido_estudio": "[b]Conceptos Clave:[/b]\n* [b]PIN de 6 dígitos[/b]: Mucho más seguro que uno de 4 dígitos (1 millón vs 10 mil combinaciones posibles).\n* [b]Autenticación Multifactor (MFA)[/b]: Añade una segunda capa de seguridad (como un código enviado a tu celular) además de tu contraseña.\n* [b]Principio de Privacidad[/b]: Nunca dejes sesiones administrativas o financieras abiertas si te ausentas de tu puesto de trabajo.",
+      "estado": "Disponible",
+      "cartas": [
+        {
+          "imagen": 0,
+          "contexto": "Recibes un correo que parece ser de la jefatura pidiéndote urgentemente que hagas una transferencia a un nuevo proveedor para cerrar un negocio antes del mediodía.",
+          "texto_izquierda": "Hacer la transferencia",
+          "texto_derecha": "Llamar y validar la solicitud",
+          "correcto": 1.0,
+          "explicacion": "Nunca realices transferencias urgentes basadas solo en un correo electrónico. El atacante puede suplantar a tu jefe (CAPEC-403). Siempre valida por un canal seguro (llamada directa) para evitar fraudes financieros y pérdidas de presupuesto.",
+          "efecto_izquierda": {
+            "presupuesto": -50,
+            "confidencialidad": -20,
+            "integridad": 10,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 15,
+            "integridad": 0,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 1,
+          "contexto": "Un colega te pide que le facilites tu contraseña de correo para 'resolver un problema técnico' rápido y evitar una molestia.",
+          "texto_izquierda": "Dar la contraseña",
+          "texto_derecha": "Negarse a compartirla",
+          "correcto": -1.0,
+          "explicacion": "Nunca compartas contraseñas. Esto viola el principio de privacidad (CIS 5.2). Si alguien te pide credenciales, es una señal de alerta inmediata de un intento de robo de identidad o acceso no autorizado.",
+          "efecto_izquierda": {
+            "presupuesto": -10,
+            "confidencialidad": -30,
+            "integridad": 5,
+            "disponibilidad": 0
+          },
+          "efecto_derecha": {
+            "presupuesto": 0,
+            "confidencialidad": 25,
+            "integridad": 10,
+            "disponibilidad": 0
+          }
+        },
+        {
+          "imagen": 0,
+          "contexto": "Tu computador se queda bloqueado y no puedes acceder a tus archivos por un mensaje que dice 'Se requiere validación de seguridad'.",
+          "texto_izquierda": "Intentar adivinar la clave",
+          "texto_derecha": "Reportar el bloqueo al soporte TI",
+          "correcto": -1.0,
+          "explicacion": "No intentes adivinar contraseñas. Esto no solo es inseguro, sino que puede activar mecanismos de bloqueo permanentes

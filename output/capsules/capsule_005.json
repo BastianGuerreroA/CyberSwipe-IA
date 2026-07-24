@@ -1,0 +1,110 @@
+{
+    "id": 5,
+    "titulo": "Amenazas Combinadas y Cultura de Ciberseguridad",
+    "subtitulo": "Reconoce cómo los ataques combinados explotan la confianza y forma una cultura de reporte proactiva.",
+    "mini_descripcion": "Entender que las amenazas se combinan para explotar debilidades humanas y aplicar el protocolo de reporte interno ante eventos sospechosos.",
+    "contenido_estudio": "[b]1. El Ciclo del Ataque Combinado[/b]\nLas amenazas modernas no son ataques aislados, sino cadenas donde un error (ej: un correo dudoso) se combina con una debilidad humana (ej: prisa o confianza) y un vector técnico (ej: un enlace malicioso) para lograr el objetivo.\n\n[b]2. Ingeniería Social como Punto de Entrada[/b]\nLa ingeniería social (como el pretexting o el baiting) es la técnica que explota la psicología humana. El atacante no ataca el software, sino a la persona, buscando crear urgencia, miedo o simpatía para obtener información o acciones.\n\n[b]3. La Cultura de Reporte como Defensa[/b]\nLa mejor defensa contra ataques combinados es la cultura de reporte. Si sospechas algo (un correo raro, un pedido extraño), reportarlo inmediatamente al equipo de TI o a tu jefe no es una molestia; es una acción crítica que detiene el ataque antes de que cause daño masivo.\n\n[b]4. El Impacto en la PYME[/b]\nUn incidente no solo afecta al computador, sino a la operación del negocio. Un ataque exitoso puede paralizar las ventas, generar multas por incumplimiento de la Ley 21.719 o destruir la reputación con clientes y proveedores.\n\n[b]5. La Responsabilidad Compartida[/b]\nLa ciberseguridad no es solo trabajo del equipo de TI. Cada trabajador es el primer y más importante filtro. Una cultura donde todos se sienten responsables de reportar riesgos reduce drásticamente el riesgo organizacional.",
+    "estado": "Disponible",
+    "cartas": [
+        {
+            "imagen": 5,
+            "contexto": "Recibes un mensaje por WhatsApp de un supuesto colega que dice estar en una reunión urgente y te pide compartir la clave de acceso a un documento del Drive para 'agilizar' el trabajo.",
+            "texto_izquierda": "Compartir inmediatamente el enlace para no retrasar al compañero",
+            "texto_derecha": "Llamar directamente al colega por Teams para confirmar la solicitud",
+            "correcto": 1.0,
+            "explicacion": "La urgencia es un disparador de ingeniería social (presión temporal). Compartir el enlace sin verificar rompe el protocolo de seguridad y permite que el atacante acceda a información sensible, poniendo en riesgo la confidencialidad de los datos corporativos.",
+            "efecto_izquierda": {
+                "presupuesto": -30,
+                "confidencialidad": -45,
+                "integridad": -10,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 0,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 2,
+            "contexto": "Un proveedor externo te envía un correo que parece legítimo pidiendo actualizar la cuenta bancaria para el pago de una factura urgente, y te presiona para hacer el cambio ahora.",
+            "texto_izquierda": "Realizar la transferencia inmediatamente para evitar retrasos en el pago",
+            "texto_derecha": "Suspender la acción y llamar al proveedor por un número conocido para validar el cambio",
+            "correcto": 1.0,
+            "explicacion": "El cambio de cuenta es una táctica común de suplantación de identidad (Pretexting). La validación telefónica evita que se caiga en estafas de cambio de cuenta y protege la integridad financiera de la PYME contra fraudes externos.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -30,
+                "integridad": -20,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 4,
+            "contexto": "Descargas un archivo de una fuente desconocida en un pendrive promocional que te dieron en una feria y el sistema te pide ejecutarlo para instalar una 'herramienta' gratuita.",
+            "texto_izquierda": "Ejecutar el archivo porque es una herramienta gratis",
+            "texto_derecha": "Rechazar la instalación y reportar el pendrive a TI inmediatamente",
+            "correcto": 1.0,
+            "explicacion": "Los dispositivos externos no verificados son un vector de ataque (Baiting). Ejecutar archivos desconocidos es una forma directa de introducir malware que puede comprometer toda la red corporativa y causar parálisis operativa.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -40,
+                "integridad": -30,
+                "disponibilidad": -20
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 1,
+            "contexto": "Detectas que un colega está accediendo a archivos de clientes que no le corresponden en Google Drive y te sientes incómodo al reportarlo.",
+            "texto_izquierda": "Ignorar la situación por miedo a generar conflicto con el compañero",
+            "texto_derecha": "Reportar inmediatamente la actividad sospechosa al equipo de TI o a tu jefe directo",
+            "correcto": 1.0,
+            "explicacion": "La cultura de reporte es vital. Ignorar una anomalía permite que un compromiso se extienda sin control. Reportar asegura que el incidente sea tratado por los expertos y minimiza el daño potencial a la reputación y a la información sensible de la empresa.",
+            "efecto_izquierda": {
+                "presupuesto": -10,
+                "confidencialidad": -50,
+                "integridad": -30,
+                "disponibilidad": 0
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        },
+        {
+            "imagen": 6,
+            "contexto": "El equipo de TI te informa que se detectó un intento de acceso no autorizado a la base de datos de clientes, pero te pide que no te preocupes y que sigas trabajando normalmente.",
+            "texto_izquierda": "Aceptar la información y seguir con tus tareas diarias",
+            "texto_derecha": "Detener inmediatamente tu trabajo y notificar al equipo de TI sobre el incidente",
+            "correcto": 1.0,
+            "explicacion": "La falta de reporte permite que un incidente se convierta en una brecha mayor (escalada). La cultura de seguridad exige que cualquier alerta de seguridad sea tratada como una emergencia para proteger la integridad y disponibilidad de los datos del negocio.",
+            "efecto_izquierda": {
+                "presupuesto": -50,
+                "confidencialidad": -40,
+                "integridad": -30,
+                "disponibilidad": -20
+            },
+            "efecto_derecha": {
+                "presupuesto": 0,
+                "confidencialidad": 20,
+                "integridad": 10,
+                "disponibilidad": 0
+            }
+        }
+    ]
+}

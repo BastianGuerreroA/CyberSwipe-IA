@@ -1,0 +1,174 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Higiene de Contraseñas y Bloqueo de Pantallas",
+            "subtitulo": "Protege tus dispositivos y accesos con PIN, biometría y claves fuertes.",
+            "mini_descripcion": "Aprende las claves fundamentales para evitar intrusos en tus dispositivos físicos y proteger tus accesos corporativos.",
+            "contenido_estudio": "El bloqueo de pantalla y las contraseñas seguras son tu primera línea de defensa.\n\n[b]Conceptos Clave:[/b]\n* [b]PIN de 6 dígitos[/b]: Mucho más seguro que uno de 4 dígitos (1 millón vs 10 mil combinaciones posibles).\n* [b]Autenticación Multifactor (MFA)[/b]: Añade una segunda capa de seguridad (como un código enviado a tu celular) además de tu contraseña.\n* [b]Principio de Privacidad[/b]: Nunca dejes sesiones administrativas o financieras abiertas si te ausentas de tu puesto de trabajo.",
+            "estado": "Disponible",
+            "cartas": [
+                {
+                    "imagen": 0,
+                    "contexto": "Te levantas de tu escritorio para ir al baño y dejas el computador desbloqueado mientras te alejas por un momento.",
+                    "texto_izquierda": "Dejarlo desbloqueado",
+                    "texto_derecha": "Bloquear la pantalla (Win+L)",
+                    "correcto": 1.0,
+                    "explicacion": "Siempre debes bloquear tu equipo al ausentarte, incluso por un momento. Esto evita que cualquier persona que entre a la oficina pueda acceder a tus archivos y sistemas.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -25,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 15,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Recibes un correo de un supuesto proveedor pidiendo urgentemente la contraseña del sistema para hacer un 'mantenimiento' remoto.",
+                    "texto_izquierda": "Enviar la contraseña",
+                    "texto_derecha": "Rechazar y verificar",
+                    "correcto": 1.0,
+                    "explicacion": "Nunca compartas contraseñas por correo electrónico o mensajes. Si alguien pide credenciales, es una señal de alerta máxima (Phishing). La respuesta correcta es rechazar y verificar la identidad del remitente.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Tu celular corporativo está desbloqueado sobre el escritorio y un visitante casual lo ve mientras camina por la oficina.",
+                    "texto_izquierda": "Dejarlo visible",
+                    "texto_derecha": "Bloquearlo inmediatamente",
+                    "correcto": 1.0,
+                    "explicacion": "El celular corporativo contiene datos sensibles. Dejarlo visible es un riesgo de robo o acceso no autorizado a información sensible de la empresa.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -40,
+                        "integridad": -15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 20,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu contraseña actual es 'pyme123'. Un compañero te sugiere usar una combinación más fuerte como 'Pyme!2024'.",
+                    "texto_izquierda": "Usar la antigua",
+                    "texto_derecha": "Cambiarla a una fuerte",
+                    "correcto": 1.0,
+                    "explicacion": "Las contraseñas débiles son el punto de entrada más fácil para los atacantes. Cambiarla por una combinación larga y compleja es esencial para proteger la información.",
+                    "efecto_izquierda": {
+                        "presupuesto": -5,
+                        "confidencialidad": -10,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "El sistema te pide iniciar sesión con tu usuario y contraseña. Un atacante intenta adivinar la clave.",
+                    "texto_izquierda": "Intentar adivinar",
+                    "texto_derecha": "Usar MFA",
+                    "correcto": 1.0,
+                    "explicacion": "La Autenticación Multifactor (MFA) es como tener dos cerraduras en lugar de una. Incluso si alguien adivina tu contraseña, no podrá entrar sin el segundo código que solo tú tienes.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -30,
+                        "integridad": -10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "El sistema te pide iniciar sesión. El atacante usa una contraseña muy fácil de adivinar.",
+                    "texto_izquierda": "Ingresar la clave",
+                    "texto_derecha": "Usar una clave fuerte",
+                    "correcto": 1.0,
+                    "explicacion": "Una contraseña fuerte es como una cerradura robusta. Los atacantes tardan mucho más en romperla si usas letras, números y símbolos mezclados.",
+                    "efecto_izquierda": {
+                        "presupuesto": -5,
+                        "confidencialidad": -10,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 0,
+                    "contexto": "Un correo electrónico parece ser de tu jefe pidiendo una transferencia urgente. El remitente tiene un error de ortografía.",
+                    "texto_izquierda": "Hacer la transferencia",
+                    "texto_derecha": "Verificar el remitente",
+                    "correcto": 1.0,
+                    "explicacion": "Los atacantes usan errores sutiles (como faltas de ortografía) para engañarte. Siempre verifica la identidad del remitente antes de hacer cualquier movimiento financiero.",
+                    "efecto_izquierda": {
+                        "presupuesto": -50,
+                        "confidencialidad": -30,
+                        "integridad": 10,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                },
+                {
+                    "imagen": 1,
+                    "contexto": "Tu computadora está conectada a una red pública (cafetería) y no tienes bloqueo de pantalla activado.",
+                    "texto_izquierda": "Trabajar sin bloqueo",
+                    "texto_derecha": "Bloquear la sesión",
+                    "correcto": 1.0,
+                    "explicacion": "Cuando trabajas en redes públicas, el riesgo es alto. Bloquear la pantalla evita que alguien pueda ver o manipular tus archivos si te levantas rápidamente.",
+                    "efecto_izquierda": {
+                        "presupuesto": 0,
+                        "confidencialidad": -30,
+                        "integridad": -15,
+                        "disponibilidad": 0
+                    },
+                    "efecto_derecha": {
+                        "presupuesto": 0,
+                        "confidencialidad": 25,
+                        "integridad": 0,
+                        "disponibilidad": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

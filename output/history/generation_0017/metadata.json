@@ -1,0 +1,10 @@
+{
+    "generation_id": "gen_453997b9",
+    "timestamp": "2026-07-22T23:07:03.621016Z",
+    "model_used": "gemma4:e2b",
+    "status": "success",
+    "errors": null,
+    "capsules_requested": 3,
+    "capsules_generated": 3,
+    "duration_seconds": 1327.79
+}

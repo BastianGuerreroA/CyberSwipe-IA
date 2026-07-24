@@ -1,0 +1,14 @@
+{
+    "generation_id": "gen_9778961c",
+    "timestamp": "2026-07-22T21:28:31.535485Z",
+    "model_used": "gemma4:e2b",
+    "status": "failed",
+    "errors": [
+        "Fallo al generar Cápsula #1: Excepción en la generación de Cápsula #1 (Intento 1): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #1 (Intento 2): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #1 (Intento 3): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate",
+        "Fallo al generar Cápsula #2: Excepción en la generación de Cápsula #2 (Intento 1): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #2 (Intento 2): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #2 (Intento 3): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate",
+        "Fallo al generar Cápsula #3: Excepción en la generación de Cápsula #3 (Intento 1): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #3 (Intento 2): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate; Excepción en la generación de Cápsula #3 (Intento 3): No se pudo establecer comunicación con Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate"
+    ],
+    "capsules_requested": 3,
+    "capsules_generated": 0,
+    "duration_seconds": 442.35
+}

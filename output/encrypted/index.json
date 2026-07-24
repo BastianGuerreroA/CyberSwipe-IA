@@ -1,0 +1,49 @@
+{
+    "capsulas": [
+        {
+            "id": 1,
+            "titulo": "Gestión Segura de Credenciales y MFA",
+            "subtitulo": "Aprende a proteger tus accesos corporativos con passphrases, gestores y MFA en entornos diversos.",
+            "mini_descripcion": "Aplica procedimientos seguros para la creación, almacenamiento y uso de contraseñas y autenticación multifactor.",
+            "filename": "capsule_001.lsg",
+            "sha256": "a68b81c23bec80d739d2a7534138767e5a9fa24fd33e5c9c300e33870e10c82f",
+            "estado": "Disponible"
+        },
+        {
+            "id": 2,
+            "titulo": "Phishing e Ingeniería Social",
+            "subtitulo": "Reconoce y detén los ataques de engaño que buscan robar información corporativa mediante la manipulación psicológica.",
+            "mini_descripcion": "Aprende a identificar las tácticas de ingeniería social (urgencia, autoridad) utilizadas en correos, mensajes y llamadas para proteger los activos de la PYME.",
+            "filename": "capsule_002.lsg",
+            "sha256": "e1cb845fa33047fb9bd2bfb02176e229dcd91b399eb6866430ada1f7d12045bf",
+            "estado": "Disponible"
+        },
+        {
+            "id": 3,
+            "titulo": "Protección del Entorno de Trabajo y Dispositivos",
+            "subtitulo": "Asegura tus dispositivos y el espacio físico para prevenir accesos no autorizados y riesgos físicos.",
+            "mini_descripcion": "Aprende a aplicar las salvaguardas básicas para proteger tu equipo, redes y la información sensible en cualquier entorno laboral.",
+            "filename": "capsule_003.lsg",
+            "sha256": "386ca226b7b296f4614f3c11c9072846fc25b04011a89dab51fa9f3dac4da3a2",
+            "estado": "Disponible"
+        },
+        {
+            "id": 4,
+            "titulo": "Protección y Clasificación de Datos Corporativos",
+            "subtitulo": "Aprende a identificar la sensibilidad de la información para protegerla según las políticas de la empresa.",
+            "mini_descripcion": "Clasifica correctamente los datos (público, interno, confidencial) antes de compartirlos o almacenarlos en diferentes entornos.",
+            "filename": "capsule_004.lsg",
+            "sha256": "bfff0ada8a49b7ab0c9ddfe9762a41b2c6c7a842acb856da3eec89125c433acf",
+            "estado": "Disponible"
+        },
+        {
+            "id": 5,
+            "titulo": "Amenazas Combinadas y Cultura de Ciberseguridad",
+            "subtitulo": "Reconoce cómo los ataques combinados explotan la confianza y forma una cultura de reporte proactiva.",
+            "mini_descripcion": "Entender que las amenazas se combinan para explotar debilidades humanas y aplicar el protocolo de reporte interno ante eventos sospechosos.",
+            "filename": "capsule_005.lsg",
+            "sha256": "ca4d62576c29656bb5f8530517a45e13abca222b2888231f0ff85c0ca44c2e46",
+            "estado": "Disponible"
+        }
+    ]
+}

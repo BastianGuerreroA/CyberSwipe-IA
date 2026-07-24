@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CyberSwipeSingleCapsuleSchema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 3
+    },
+    "subtitulo": {
+      "type": "string",
+      "minLength": 5
+    },
+    "mini_descripcion": {
+      "type": "string",
+      "minLength": 10
+    },
+    "contenido_estudio": {
+      "type": "string",
+      "minLength": 20
+    },
+    "estado": {
+      "type": "string",
+      "enum": ["Disponible", "Bloqueado"]
+    },
+    "cartas": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "properties": {
+          "imagen": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "contexto": {
+            "type": "string",
+            "minLength": 10
+          },
+          "texto_izquierda": {
+            "type": "string",
+            "minLength": 1
+          },
+          "texto_derecha": {
+            "type": "string",
+            "minLength": 1
+          },
+          "correcto": {
+            "type": "number",
+            "enum": [-1.0, 1.0]
+          },
+          "explicacion": {
+            "type": "string",
+            "minLength": 10
+          },
+          "efecto_izquierda": {
+            "type": "object",
+            "properties": {
+              "presupuesto": { "type": "integer" },
+              "confidencialidad": { "type": "integer" },
+              "integridad": { "type": "integer" },
+              "disponibilidad": { "type": "integer" }
+            },
+            "required": ["presupuesto", "confidencialidad", "integridad", "disponibilidad"],
+            "additionalProperties": false
+          },
+          "efecto_derecha": {
+            "type": "object",
+            "properties": {
+              "presupuesto": { "type": "integer" },
+              "confidencialidad": { "type": "integer" },
+              "integridad": { "type": "integer" },
+              "disponibilidad": { "type": "integer" }
+            },
+            "required": ["presupuesto", "confidencialidad", "integridad", "disponibilidad"],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "imagen",
+          "contexto",
+          "texto_izquierda",
+          "texto_derecha",
+          "correcto",
+          "explicacion",
+          "efecto_izquierda",
+          "efecto_derecha"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["id", "titulo", "subtitulo", "mini_descripcion", "contenido_estudio", "estado", "cartas"],
+  "additionalProperties": false
+}

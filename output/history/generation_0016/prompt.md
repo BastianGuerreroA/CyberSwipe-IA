@@ -1,0 +1,1 @@
+Generación individual de 3 cápsulas
